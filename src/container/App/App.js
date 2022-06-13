@@ -5,7 +5,7 @@ import { Footer } from '../Footer/Footer'
 
 import CssBaseline from '@mui/material/CssBaseline'
 
-import SimpleSlider from 'container/Slider/Slider'
+import Slider from 'container/Slider/Swiper'
 
 export const App = () => {
     return (
@@ -13,7 +13,7 @@ export const App = () => {
             <CssBaseline />
 
             <Header />
-            <SimpleSlider />
+            <Slider />
             <Main />
             <Footer />
         </>

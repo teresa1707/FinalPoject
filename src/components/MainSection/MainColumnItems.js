@@ -2,11 +2,12 @@ import React from 'react'
 import Grid from '@mui/material/Grid'
 import 'styles/Main.scss'
 import 'styles/grid.scss'
+import { ModalWindow } from 'components/Modal/Modal'
 
-import FbIcon from 'Assets/facebook-24-blue.png'
-import twitterIcon from 'Assets/twitter-24-blue.png'
-import pinterestIcon from 'Assets/pinterest-24-blue.png'
-import linkedinIcon from 'Assets/linkedin-3-24-blue.png'
+import FbIcon from 'Assets/facebook-24.png'
+import twitterIcon from 'Assets/twitter-24-1.png'
+import pinterestIcon from 'Assets/pinterest-6-24.png'
+import linkedinIcon from 'Assets/linkedin-cl-24.png'
 
 export const MainColumnItems = () => {
     return (
@@ -36,6 +37,7 @@ export const MainColumnItems = () => {
                             velit et?
                         </p>
                     </div>
+                    <ModalWindow className="modalWindow" />
                 </Grid>
                 <Grid item className="col-style" mb={4}>
                     <div className="title2">Follow us</div>

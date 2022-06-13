@@ -14,7 +14,7 @@ export const Menu = () => {
                             </a>
                         </li>
                         <li>
-                            <a className="nav-item" href="#">
+                            <a className="nav-item" href="#category">
                                 category
                             </a>
                         </li>

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.list1-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.list1-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65px;
+    min-height: 50px;
+    background: #dcdad3;
+    border-radius: 22.5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25),
+        inset 1px 1px 1px rgba(255, 255, 255, 0.5),
+        inset -1px -1px 1px rgba(60, 52, 52, 0.5);
+    transition: 0.5s;
+}
+
+.list1-item:hover::before {
+    width: 100%;
+}
+
+.list1-item .rank {
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.list1-item .rank::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.list1-item:hover .rank::before {
+    transform: scale(1);
+}
+
+.list1-item .rank span {
+    position: relative;
+
+    left: 5px;
+    transition: 0.5s;
+}
+
+.list1-item .name {
+    position: relative;
+    line-height: 1.15rem;
+}
+
+.list1-item .name h4 {
+    font-weight: 600;
+    color: #bcbcc0;
+    transition: 0.5s;
+}
+
+.list1-item .name p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #95999d;
+    transition: 0.5s;
+}
+
+.list1-item:hover .name h4,
+.list1-item:hover .name p {
+    color: orangered;
+}

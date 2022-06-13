@@ -14,11 +14,11 @@ export const MainSection = () => {
                     <Grid item xs={12} className="title">
                         <Title />
                     </Grid>
-                    <Grid item xs={12} sm={4}>
+                    <Grid item xs={12} md={3}>
                         <MainColumnItems />
                     </Grid>
 
-                    <Grid item xs={12} sm={8}>
+                    <Grid item xs={12} md={9}>
                         <MainArticlesSection />
                     </Grid>
                 </Grid>

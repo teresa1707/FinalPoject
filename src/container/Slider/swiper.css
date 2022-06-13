@@ -1,0 +1,99 @@
+#app {
+    height: 100%;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #dfd7c6;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background: url('../../../public/images/Images-Background-Full-HD.png');
+}
+
+/* .swiper-slide .title {
+    font-size: 41px;
+    font-weight: 300;
+    color: #dfd7c6;
+    
+} */
+
+.swiper-slide .subtitle {
+    width: 50%;
+    font-size: 21px;
+    margin-left: 1%;
+}
+
+.swiper-slide .text {
+    font-size: 14px;
+    /* max-width: 400px; */
+    max-width: 80%;
+    line-height: 1.3;
+    margin-left: 40px;
+}
+.swiper-slide .text p {
+    color: #dfd7c6;
+}
+.swiper-slide .text img {
+    max-width: 100%;
+    margin-left: 100px;
+}
+
+.grid-item {
+    padding: 30px;
+}
+.swiper-button {
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    color: #dfd7c6;
+    font-size: 13px;
+}
+.swiper-button:hover {
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-bottom-color: orangered;
+    color: #dfd7c6;
+    font-size: 12px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: #dfd7c6 !important;
+}
+@media (max-width: 900px) {
+    .swiper-slide .text img {
+        margin-left: 0px;
+    }
+}

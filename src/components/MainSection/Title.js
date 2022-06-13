@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './useful.scss'
+import './TitleCutPaper.scss'
 
 const Text = ({ value }) => (
     <div className="text1">
