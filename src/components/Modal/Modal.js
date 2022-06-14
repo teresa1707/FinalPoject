@@ -6,7 +6,7 @@ import '../../container/Slider/swiper.css'
 
 export const ModalWindow = () => {
     const [open, setOpen] = React.useState(false)
-    const [backdrop, setBackdrop] = React.useState('static')
+
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 

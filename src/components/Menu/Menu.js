@@ -9,7 +9,7 @@ export const Menu = () => {
                 <nav className="navigation">
                     <ul>
                         <li>
-                            <a className="nav-item" href="#">
+                            <a className="nav-item" href="#category">
                                 home
                             </a>
                         </li>
@@ -19,17 +19,17 @@ export const Menu = () => {
                             </a>
                         </li>
                         <li>
-                            <a className="nav-item" href="#">
+                            <a className="nav-item" href="#category">
                                 blog
                             </a>
                         </li>
                         <li>
-                            <a className="nav-item" href="#">
+                            <a className="nav-item" href="#category">
                                 gallery
                             </a>
                         </li>
                         <li>
-                            <a className="nav-item" href="#">
+                            <a className="nav-item" href="#category">
                                 contact
                             </a>
                         </li>
