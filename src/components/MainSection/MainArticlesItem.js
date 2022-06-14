@@ -6,7 +6,6 @@ import './Images.scss'
 import '../../components/Title-categories/Icon.scss'
 import '../../components/Title-categories/Like.scss'
 import unlike from 'Assets/Heart-white1-23.png'
-import like from 'Assets/red-heart23.png'
 
 export const MainArticlesItem = ({
     image,

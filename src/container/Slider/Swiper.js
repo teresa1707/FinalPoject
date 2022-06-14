@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -11,7 +11,7 @@ import 'swiper/css/navigation'
 // import required modules
 import { Parallax, Pagination, Navigation } from 'swiper'
 import { Grid } from '@mui/material'
-import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite'
+import { Button } from 'rsuite'
 
 export default function Slider() {
     return (

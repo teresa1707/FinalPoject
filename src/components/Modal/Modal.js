@@ -1,16 +1,8 @@
 import React from 'react'
 
-import { Button, ButtonToolbar, Modal, Radio, RadioGroup } from 'rsuite'
+import { Button, ButtonToolbar, Modal } from 'rsuite'
 import './Modal.scss'
 import '../../container/Slider/swiper.css'
-
-const styles = {
-    radioGroupLabel: {
-        padding: '8px 12px',
-        display: 'inline-block',
-        verticalAlign: 'middle',
-    },
-}
 
 export const ModalWindow = () => {
     const [open, setOpen] = React.useState(false)
@@ -22,7 +14,6 @@ export const ModalWindow = () => {
         <div className="modal-container">
             <Modal
                 className="modal"
-                backdrop={backdrop}
                 keyboard={false}
                 open={open}
                 onClose={handleClose}

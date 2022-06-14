@@ -44,16 +44,16 @@ export const MainColumnItems = () => {
                     <div className="text2">
                         <p>
                             We are here :
-                            <a href="#">
+                            <a href="#menu">
                                 <img src={FbIcon} alt="" />
                             </a>
-                            <a href="#">
+                            <a href="#menu">
                                 <img src={twitterIcon} alt="" />
                             </a>
-                            <a href="#">
+                            <a href="#menu">
                                 <img src={pinterestIcon} alt="" />
                             </a>
-                            <a href="#">
+                            <a href="#menu">
                                 <img src={linkedinIcon} alt="" />
                             </a>
                         </p>
