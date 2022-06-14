@@ -50,10 +50,8 @@ export const Footer = () => {
             <div className="wrapper-dark">
                 <Container>
                     <Grid container>
-                        <Grid item xs={12} sm={10}>
-                            <div className="p-dark">
-                                ©2022 Teresa V | All rights reserved
-                            </div>
+                        <Grid item xs={12} sm={10} className="footer-end">
+                            <div>©2022 Teresa V | All rights reserved</div>
                         </Grid>
                         <Grid item xs={12} sm={2}>
                             <a href="#Top_bar">

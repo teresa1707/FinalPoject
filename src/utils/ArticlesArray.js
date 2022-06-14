@@ -3,7 +3,7 @@ const articles = [
         id: 1,
         link: 'images/blackHall.jpg',
         image: 'images/blackHall.jpg',
-        categoryIcon: 'images/science-icon-35.png',
+        categoryIcon: 'images/lamp35.png',
         title: 'Ipsum dolor sit',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ipsa ullam omnis amet ut possimus sit.',
         fullText:
@@ -28,7 +28,7 @@ const articles = [
         id: 3,
         link: 'images/veloAttached.jpg',
         image: 'images/veloAttached.jpg',
-        categoryIcon: 'images/theater30.png',
+        categoryIcon: 'images/mask35.png',
         title: 'Dans des expériences de contrôle',
         text: 'Dans des expériences de contrôle dans lesquelles certaines des molécules nécessaires aux réactions chimiques n’étaient pas présentes, certaines parties du processus de la glycolyse se produisaient quand mêmeLe groupe, basé à l’époque à l’université de Cambridge.',
         fullText:
@@ -41,7 +41,7 @@ const articles = [
         id: 4,
         link: 'images/veloAttached.jpg',
         image: 'images/veloAttached.jpg',
-        categoryIcon: 'images/theater30.png',
+        categoryIcon: 'images/mask35.png',
         title: 'Dans des expériences de contrôle',
         text: 'Dans des expériences de contrôle dans lesquelles certaines des molécules nécessaires aux réactions chimiques n’étaient pas présentes, certaines parties du processus de la glycolyse se produisaient quand mêmeLe groupe, basé à l’époque à l’université de Cambridge.',
         fullText:

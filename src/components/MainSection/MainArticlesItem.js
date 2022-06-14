@@ -5,7 +5,7 @@ import 'styles/grid.scss'
 import './Images.scss'
 import '../../components/Title-categories/Icon.scss'
 import '../../components/Title-categories/Like.scss'
-
+import unlike from 'Assets/Heart-white1-23.png'
 import like from 'Assets/red-heart23.png'
 
 export const MainArticlesItem = ({
@@ -61,7 +61,7 @@ export const MainArticlesItem = ({
                     <div className="list2-item">
                         <div className="rank">
                             <span>
-                                <img src={like} alt="" />
+                                <img src={unlike} alt="" />
                             </span>
                         </div>
                     </div>
