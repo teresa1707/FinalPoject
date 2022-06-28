@@ -4,11 +4,13 @@ import 'styles/Main.scss'
 import 'styles/grid.scss'
 import { MainArticlesItem } from './MainArticlesItem'
 import ArticlesArray from 'utils/ArticlesArray'
+import { getArticles } from 'utils/ArticlesArray'
 
 export const MainArticlesSection = () => {
+    let articles = getArticles()
     return (
         <>
-            {ArticlesArray.map(
+            {ArticlesArray.filter((articles) => articles.isHome === true).map(
                 ({
                     id,
                     link,
@@ -18,6 +20,9 @@ export const MainArticlesSection = () => {
                     text,
                     date,
                     author,
+                    isHome = true,
+                    category,
+                    fullText,
                 }) => (
                     <MainArticlesItem
                         id={id}
@@ -28,6 +33,9 @@ export const MainArticlesSection = () => {
                         text={text}
                         date={date}
                         author={author}
+                        isHome={isHome}
+                        category={category}
+                        fullText={fullText}
                     />
                 )
             )}

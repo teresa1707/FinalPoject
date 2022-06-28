@@ -9,7 +9,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 // import required modules
-import { Parallax, Pagination, Navigation } from 'swiper'
+import { Parallax, Pagination, Navigation, Autoplay } from 'swiper'
 import { Grid } from '@mui/material'
 import { Button } from 'rsuite'
 
@@ -27,8 +27,9 @@ export default function Slider() {
                     clickable: true,
                     auto: true,
                 }}
+                autoplay={{ delay: 3000 }}
                 navigation={true}
-                modules={[Parallax, Pagination, Navigation]}
+                modules={[Parallax, Pagination, Navigation, Autoplay]}
                 className="mySwiper"
             >
                 <div
@@ -66,7 +67,7 @@ export default function Slider() {
                                 </Button>
                             </Grid>
                             <Grid item xs={12} md={6} className="grid-item">
-                                <img src="images/blackHall.jpg" alt=""></img>
+                                <img src="images/history11.jpg" alt=""></img>
                             </Grid>
                         </Grid>
                     </div>
@@ -99,7 +100,7 @@ export default function Slider() {
                                 </Button>
                             </Grid>
                             <Grid item xs={12} md={6} className="grid-item">
-                                <img src="images/blackHall.jpg" alt=""></img>
+                                <img src="images/science11.jpg" alt=""></img>
                             </Grid>
                         </Grid>
                     </div>
@@ -132,7 +133,7 @@ export default function Slider() {
                                 </Button>
                             </Grid>
                             <Grid item xs={12} md={6} className="grid-item">
-                                <img src="images/blackHall.jpg" alt=""></img>
+                                <img src="images/art11.jpg" alt=""></img>
                             </Grid>
                         </Grid>
                     </div>

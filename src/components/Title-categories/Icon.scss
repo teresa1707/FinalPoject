@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 .list1-item {
@@ -16,7 +15,7 @@
 .list1-item::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -12px;
     left: 25px;
     width: 65px;
     min-height: 50px;
@@ -26,10 +25,6 @@
         inset 1px 1px 1px rgba(255, 255, 255, 0.5),
         inset -1px -1px 1px rgba(60, 52, 52, 0.5);
     transition: 0.5s;
-}
-
-.list1-item:hover::before {
-    width: 100%;
 }
 
 .list1-item .rank {
@@ -42,23 +37,9 @@
     border-radius: 50%;
 }
 
-.list1-item .rank::before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    transform: scale(0);
-    transition: 0.5s;
-}
-
-.list1-item:hover .rank::before {
-    transform: scale(1);
-}
-
 .list1-item .rank span {
     position: relative;
-    top: 5px;
+    top: -8px;
     left: 32px;
     transition: 0.5s;
 }
@@ -80,8 +61,6 @@
     color: #95999d;
     transition: 0.5s;
 }
-
-.list1-item:hover .name h4,
-.list1-item:hover .name p {
-    color: orangered;
+.list1-item:hover::before {
+    background-color: #d9cdae;
 }

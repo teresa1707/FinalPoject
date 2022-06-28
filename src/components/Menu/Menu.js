@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink, Outlet } from 'react-router-dom'
 
 import './Menu.scss'
 
@@ -7,31 +8,32 @@ export const Menu = () => {
         <>
             <div className="menu">
                 <nav className="navigation">
-                    <ul>
-                        <li>
-                            <a className="nav-item" href="#category">
+                    <ul className="ul">
+                        <li className="li">
+                            <NavLink to="/" className="nav-item">
                                 home
-                            </a>
+                            </NavLink>
                         </li>
-                        <li>
-                            <a className="nav-item" href="#category">
+                        <li className="dropdown">
+                            <NavLink to="/category" className="nav-item">
                                 category
-                            </a>
-                        </li>
-                        <li>
-                            <a className="nav-item" href="#category">
-                                blog
-                            </a>
-                        </li>
-                        <li>
-                            <a className="nav-item" href="#category">
+                            </NavLink>
+
+                            <div className="dropdown-content">
+                                <Link to="/history">History</Link>
+                                <Link to="/art">Art</Link>
+                                <Link to="/science">Science</Link>
+                            </div>
+                        </li>{' '}
+                        <li className="li">
+                            <NavLink to="/gallery" className="nav-item">
                                 gallery
-                            </a>
+                            </NavLink>
                         </li>
-                        <li>
-                            <a className="nav-item" href="#category">
+                        <li className="li">
+                            <NavLink to="/contact" className="nav-item">
                                 contact
-                            </a>
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>

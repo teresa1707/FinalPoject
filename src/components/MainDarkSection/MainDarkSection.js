@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import { Grid } from '@mui/material'
 import { Container } from '@mui/system'
 import 'styles/Main.scss'
@@ -17,8 +17,13 @@ export const MainDarkSection = () => {
                 <Grid container id="category">
                     <Grid item xs={12} sm={4} className="gridItem">
                         <div className="article-1">
-                            <TitleHistory />
-                            <div className="p-dark text-section">
+                            <Link
+                                to="/history"
+                                style={{ textDecoration: 'none' }}
+                            >
+                                <TitleHistory />
+                            </Link>
+                            <div className="p-dark">
                                 Ipsam id ducimus ullam unde et voluptatem beatae
                                 aut, ratione eum cumque ...
                             </div>
@@ -26,8 +31,14 @@ export const MainDarkSection = () => {
                     </Grid>
                     <Grid item xs={12} sm={4} className="gridItem">
                         <div className="article-2">
-                            <TitleScience />
-                            <div className="p-dark text-section">
+                            <Link
+                                to="/science"
+                                style={{ textDecoration: 'none' }}
+                            >
+                                <TitleScience />
+                            </Link>
+
+                            <div className="p-dark">
                                 {' '}
                                 Reprehenderit modi soluta ipsa eius quibusdam
                                 laboriosam officia nemo recusandae ...
@@ -36,8 +47,10 @@ export const MainDarkSection = () => {
                     </Grid>
                     <Grid item xs={12} sm={4} className="gridItem">
                         <div className="article-3">
-                            <TitleArt />
-                            <div className="p-dark text-section">
+                            <Link to="/art" style={{ textDecoration: 'none' }}>
+                                <TitleArt />
+                            </Link>
+                            <div className="p-dark">
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Reprehenderit modi soluta ipsa
                                 eius quibusdam ...

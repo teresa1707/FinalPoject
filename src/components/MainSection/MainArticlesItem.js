@@ -6,15 +6,20 @@ import './Images.scss'
 import '../../components/Title-categories/Icon.scss'
 import '../../components/Title-categories/Like.scss'
 import unlike from 'Assets/Heart-white1-23.png'
+import { Link } from 'react-router-dom'
+import articles from 'utils/ArticlesArray'
 
 export const MainArticlesItem = ({
+    id,
+
     image,
-    link,
+
     categoryIcon,
     title,
     text,
     date,
     author,
+    category,
 }) => {
     return (
         <>
@@ -32,21 +37,35 @@ export const MainArticlesItem = ({
                             <h2>
                                 {date}-{author}
                             </h2>
-                            <a href={link} target="_blank" rel="noreferrer">
-                                <p>read more...</p>
-                            </a>
+                            {articles.map((article) => (
+                                <Link
+                                    to={`/articles/${category}${id}`}
+                                    key={id}
+                                >
+                                    <p>read more...</p>
+                                </Link>
+                            ))}
                         </figcaption>
                     </figure>
                 </Grid>
-
+                {/* {invoices.map((invoice) => (
+          <Link
+            style={{ display: "block", margin: "1rem 0" }}
+            to={`/invoices/${invoice.number}`}
+            key={invoice.number}
+          >
+            {invoice.name}
+          </Link> */}
                 <Grid item xs={12} md={6} className="title3-container gridItem">
                     <div className="inline">
                         <div className="list1-item">
-                            <div className="rank">
-                                <span>
-                                    <img src={categoryIcon} alt="" />
-                                </span>
-                            </div>
+                            <Link to={`/${category}`}>
+                                <div className="rank">
+                                    <span>
+                                        <img src={categoryIcon} alt="" />
+                                    </span>
+                                </div>
+                            </Link>
                             <div className="name">
                                 <h2 className="title3-card gridItem">
                                     {title}

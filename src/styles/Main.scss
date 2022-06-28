@@ -8,7 +8,7 @@
         #5b422c 55%,
         rgba(71, 73, 74, 0.927608543417367) 100%
     );
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    // border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 .wrapper {
     background-color: #f5f4f3;
@@ -23,8 +23,10 @@
 .p-dark {
     color: rgba(255, 255, 255, 0.6);
     font-weight: 100;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 17px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 //main section
@@ -38,8 +40,6 @@
 }
 
 .col-style {
-    width: 100%;
-    height: fit-content;
     background-color: white;
     border-radius: 8px;
     margin: 0 40px 20px 40px;
