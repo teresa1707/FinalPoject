@@ -21,10 +21,10 @@ export const SciencePageItem = ({
 }) => {
     return (
         <>
-            <Grid container className="col-style-cat art-grid ">
+            <Grid className="col-style-cat art-grid ">
                 <div className="art-item">
                     <div className="art-item-box">
-                        <Link to={`/articles/${category}${id}`}>
+                        <Link to={`/articles/${category}/${id}`}>
                             <div className="art-img-wrap">
                                 <img
                                     alt={title}

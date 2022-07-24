@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const GalleryPage = () => {
+export const AboutPage = () => {
     return (
         <>
-            <div>Gallery Page</div>
+            <div>About Page</div>
         </>
     )
 }

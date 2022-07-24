@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
-
+import articles from 'utils/ArticlesArray'
 import './Menu.scss'
 
 export const Menu = () => {
@@ -15,16 +15,13 @@ export const Menu = () => {
                             </NavLink>
                         </li>
                         <li className="dropdown">
-                            <NavLink to="/category" className="nav-item">
-                                category
-                            </NavLink>
-
+                            <a className="nav-item">Category</a>
                             <div className="dropdown-content">
-                                <Link to="/history">History</Link>
-                                <Link to="/art">Art</Link>
-                                <Link to="/science">Science</Link>
+                                <Link to={`/history`}>History</Link>
+                                <Link to={`/art`}>Art</Link>
+                                <Link to={`/science`}>Science</Link>
                             </div>
-                        </li>{' '}
+                        </li>
                         <li className="li">
                             <NavLink to="/gallery" className="nav-item">
                                 gallery

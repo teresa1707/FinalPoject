@@ -1,6 +1,7 @@
-import React from 'react'
+import { React, useState } from 'react'
 import { Grid } from '@mui/material'
-import unlike from 'Assets/Heart-white1-23.png'
+import articles from 'utils/ArticlesArray'
+import { FaHeart } from 'react-icons/fa'
 import 'pages/Category/Category.scss'
 import 'styles/Main.scss'
 import 'styles/grid.scss'
@@ -59,7 +60,10 @@ export const ArtPageItem = ({
                             <div className="list2-item-cat">
                                 <div className="rank-cat">
                                     <span>
-                                        <img src={unlike} alt="" />
+                                        <FaHeart
+                                            className="heart"
+                                            style={{ fontSize: 20 }}
+                                        />
                                     </span>
                                 </div>
                             </div>

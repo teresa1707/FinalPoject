@@ -7,62 +7,70 @@ import 'styles/grid.scss'
 import 'components/MainSection/Images.scss'
 import 'components/Title-categories/Icon.scss'
 import 'components/Title-categories/Like.scss'
-
-import { Route, Routes } from 'react-router-dom'
+import { FaHeart } from 'react-icons/fa'
+import { useParams } from 'react-router-dom'
+import articles, { getArticlesObject } from 'utils/ArticlesArray'
 
 export const ArticleItem = ({
-    link,
-    image,
-    categoryIcon,
-    title,
-    id,
-    date,
-    author,
-    fullText,
+    articlesObject = getArticlesObject(articles),
 }) => {
+    let { id } = useParams()
+
     return (
         <>
             <Grid container className="col-style-cat art-grid ">
                 <div className="art-item">
                     <div className="art-item-box">
                         <div className="art-img-wrap">
-                            <a href={link} target="_blank">
+                            <a
+                                href={articlesObject[id].link}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 <img
-                                    alt={title}
+                                    alt={articlesObject[id].title}
                                     className="art-img"
-                                    src={image}
+                                    src={articlesObject[id].image}
                                 />
                             </a>
                         </div>
                         <div className="art-content">
                             <div className="art-meta">
-                                {author}
+                                {articlesObject[id].author}
                                 <span className="art-separator">//</span>
-                                {date}
-                                {id}
+                                {articlesObject[id].date}
+                                {articlesObject[id].id}
                             </div>
 
                             <div className="list1-item-cat">
                                 <div className="rank-cat">
                                     <span className="catIcon">
-                                        <img src={categoryIcon} alt="" />
+                                        <img
+                                            src={
+                                                articlesObject[id].categoryIcon
+                                            }
+                                            alt=""
+                                        />
                                     </span>
                                 </div>
 
                                 <div className="name-cat">
                                     <h2 className="title3-card gridItem">
-                                        {title}
+                                        {articlesObject[id].title}
                                     </h2>
                                 </div>
                             </div>
 
                             <div className="art-text">
-                                <p>{fullText}</p>
+                                <p>{articlesObject[id].fullText}</p>
                             </div>
                             <div className="list2-item-cat">
                                 <div className="rank-cat">
                                     <span>
-                                        <img src={unlike} alt="" />
+                                        <FaHeart
+                                            className="heart"
+                                            style={{ fontSize: 20 }}
+                                        />
                                     </span>
                                 </div>
                             </div>

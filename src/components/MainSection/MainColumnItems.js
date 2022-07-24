@@ -4,10 +4,7 @@ import 'styles/Main.scss'
 import 'styles/grid.scss'
 import { ModalWindow } from 'components/Modal/Modal'
 
-import FbIcon from 'Assets/facebook-24.png'
-import twitterIcon from 'Assets/twitter-24-1.png'
-import pinterestIcon from 'Assets/pinterest-6-24.png'
-import linkedinIcon from 'Assets/linkedin-cl-24.png'
+import { FollowUs } from 'components/FollowUs/FollowUs'
 
 export const MainColumnItems = () => {
     return (
@@ -40,24 +37,7 @@ export const MainColumnItems = () => {
                     <ModalWindow className="modalWindow" />
                 </Grid>
                 <Grid item className="col-style" mb={4}>
-                    <div className="title2">Follow us</div>
-                    <div className="text2">
-                        <p>
-                            We are here :
-                            <a href="#menu">
-                                <img src={FbIcon} alt="" />
-                            </a>
-                            <a href="#menu">
-                                <img src={twitterIcon} alt="" />
-                            </a>
-                            <a href="#menu">
-                                <img src={pinterestIcon} alt="" />
-                            </a>
-                            <a href="#menu">
-                                <img src={linkedinIcon} alt="" />
-                            </a>
-                        </p>
-                    </div>
+                    <FollowUs />
                 </Grid>
             </Grid>
         </>

@@ -5,15 +5,12 @@ import 'styles/grid.scss'
 import './Images.scss'
 import '../../components/Title-categories/Icon.scss'
 import '../../components/Title-categories/Like.scss'
-import unlike from 'Assets/Heart-white1-23.png'
 import { Link } from 'react-router-dom'
-import articles from 'utils/ArticlesArray'
+import { FaHeart } from 'react-icons/fa'
 
 export const MainArticlesItem = ({
     id,
-
     image,
-
     categoryIcon,
     title,
     text,
@@ -23,7 +20,7 @@ export const MainArticlesItem = ({
 }) => {
     return (
         <>
-            <Grid container className="col-style">
+            <Grid container className="col-style" key={id}>
                 <Grid
                     item
                     xs={12}
@@ -37,25 +34,14 @@ export const MainArticlesItem = ({
                             <h2>
                                 {date}-{author}
                             </h2>
-                            {articles.map((article) => (
-                                <Link
-                                    to={`/articles/${category}${id}`}
-                                    key={id}
-                                >
-                                    <p>read more...</p>
-                                </Link>
-                            ))}
+
+                            <Link to={`/articles/${category}/${id}`}>
+                                <p>read more...</p>
+                            </Link>
                         </figcaption>
                     </figure>
                 </Grid>
-                {/* {invoices.map((invoice) => (
-          <Link
-            style={{ display: "block", margin: "1rem 0" }}
-            to={`/invoices/${invoice.number}`}
-            key={invoice.number}
-          >
-            {invoice.name}
-          </Link> */}
+
                 <Grid item xs={12} md={6} className="title3-container gridItem">
                     <div className="inline">
                         <div className="list1-item">
@@ -66,20 +52,30 @@ export const MainArticlesItem = ({
                                     </span>
                                 </div>
                             </Link>
-                            <div className="name">
-                                <h2 className="title3-card gridItem">
-                                    {title}
-                                </h2>
-                            </div>
+                            <Link to={`/articles/${category}/${id}`}>
+                                {' '}
+                                <div className="name">
+                                    <h2 className="title3-card gridItem">
+                                        {title}
+                                    </h2>
+                                </div>
+                            </Link>
                         </div>
                     </div>
-                    <div className="text">
-                        <p>{text}</p>
-                    </div>
+                    <Link to={`/articles/${category}/${id}`}>
+                        {' '}
+                        <div className="text">
+                            <p>{text}</p>
+                        </div>
+                    </Link>
+
                     <div className="list2-item">
                         <div className="rank">
                             <span>
-                                <img src={unlike} alt="" />
+                                <FaHeart
+                                    className="heart"
+                                    style={{ fontSize: 20 }}
+                                />
                             </span>
                         </div>
                     </div>

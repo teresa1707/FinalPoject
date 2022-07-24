@@ -3,11 +3,19 @@ import './Title-categories.scss'
 import ImgHistory from 'Assets/rome25.png'
 import ImgArt from 'Assets/mask35.png'
 import ImgScience from 'Assets/lamp35.png'
+import { NavLink } from 'react-router-dom'
 
 export const TitleHistory = () => {
     return (
         <>
-            <div className="list-item">
+            {' '}
+            <NavLink
+                to="/history"
+                style={{ textDecoration: 'none' }}
+                className={({ isActive }) =>
+                    isActive ? 'list-item-active' : 'list-item'
+                }
+            >
                 <div className="rank">
                     <span>
                         <img src={ImgHistory} alt="text"></img>
@@ -16,14 +24,20 @@ export const TitleHistory = () => {
                 <div className="name">
                     <h4>HISTORY</h4>
                 </div>
-            </div>
+            </NavLink>
         </>
     )
 }
 export const TitleScience = () => {
     return (
         <>
-            <div className="list-item">
+            <NavLink
+                to="/science"
+                style={{ textDecoration: 'none' }}
+                className={({ isActive }) =>
+                    isActive ? 'list-item-active' : 'list-item'
+                }
+            >
                 <div className="rank">
                     <span>
                         <img src={ImgScience} alt="text"></img>
@@ -32,14 +46,20 @@ export const TitleScience = () => {
                 <div className="name">
                     <h4>SCIENCE</h4>
                 </div>
-            </div>
+            </NavLink>
         </>
     )
 }
 export const TitleArt = () => {
     return (
         <>
-            <div className="list-item">
+            <NavLink
+                to="/art"
+                style={{ textDecoration: 'none' }}
+                className={({ isActive }) =>
+                    isActive ? 'list-item-active' : 'list-item'
+                }
+            >
                 <div className="rank">
                     <span>
                         <img src={ImgArt} alt="text"></img>
@@ -48,7 +68,7 @@ export const TitleArt = () => {
                 <div className="name">
                     <h4>ART</h4>
                 </div>
-            </div>
+            </NavLink>
         </>
     )
 }

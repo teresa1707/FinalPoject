@@ -7,7 +7,6 @@
 }
 .li {
     text-align: center;
-    // border-left: 1px dotted rgb(126, 124, 117);
     line-height: 30px;
 }
 .li .nav-item {
@@ -26,7 +25,6 @@
 .li .nav-item:after {
     content: '';
     padding-bottom: 20.5px;
-    // border-bottom: 5px solid rgb(87, 107, 158);
     border-bottom: 3px solid orangered;
     display: block;
     width: 100px;
@@ -36,7 +34,6 @@
 .li .nav-item:hover:after {
     content: '';
     border-bottom: 3px solid orangered;
-    // border-radius: 10px;
     display: block;
     width: 100px;
     margin-top: -1.2em;
@@ -75,7 +72,6 @@
     left: -10px;
     background-image: linear-gradient(
         90deg,
-        rgb(26, 19, 19) 0%,
         #5b422c 55%,
         rgba(71, 73, 74, 0.927608543417367) 100%
     );

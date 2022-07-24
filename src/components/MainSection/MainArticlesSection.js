@@ -4,10 +4,8 @@ import 'styles/Main.scss'
 import 'styles/grid.scss'
 import { MainArticlesItem } from './MainArticlesItem'
 import ArticlesArray from 'utils/ArticlesArray'
-import { getArticles } from 'utils/ArticlesArray'
 
 export const MainArticlesSection = () => {
-    let articles = getArticles()
     return (
         <>
             {ArticlesArray.filter((articles) => articles.isHome === true).map(
