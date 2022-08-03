@@ -1,12 +1,13 @@
 const articles = [
     {
         id: 1,
-        link: '/images/science1.jpg',
-        image: '/images/science1.jpg',
+        link: '/images/science3.jpg',
+        image: '/images/science3.jpg',
         categoryIcon: '/images/lamp35.png',
         category: 'science',
-        title: 'Ipsum dolor sit',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ipsa ullam omnis amet ut possimus sit.',
+        title: 'Dans des expériences de contrôle',
+        text: 'Contrôle dans lesquelles certaines des molécules nécessaires aux réactions chimiques n’étaient pas présentes, certaines parties du processus.',
+
         fullText:
             '<p>&copy; MIKHAIL GOLENKOV / SPUTNIK / SPUTNIK VIA AFP<br />mar. 28 juin 2022, 8:34 AM<br />Les dirigeants de l Otan vont d&eacute;cider au sommet de Madrid de transformer leur force de r&eacute;action et de porter &quot;bien au-dessus&quot; de 300.000 hommes les troupes &agrave; haut niveau de pr&eacute;paration pour faire face &agrave; la menace russe. Sur le flanc Est, la tension monte notamment en Lituanie. Pourquoi la menace russe p&egrave;se-t-elle particuli&egrave;rement sur cet &Eacute;tat balte ?<br />Ouverture du sommet de l Otan ce mardi, alors que les forces russes poursuivent leur offensive en Ukraine. Les dirigeants de l Otan vont d&eacute;cider au sommet de Madrid de transformer leur force de r&eacute;action et de porter &quot;bien au-dessus&quot; de 300.000 hommes les troupes &agrave; haut niveau de pr&eacute;paration pour faire face &agrave; la menace russe. Sur le flanc Est, la tension monte notamment en Lituanie. Pourquoi la menace russe p&egrave;se-t-elle particuli&egrave;rement sur cet &Eacute;tat balte ? Principalement pour une raison de g&eacute;ographie, puisque la Lituanie est situ&eacute;e entre la Bi&eacute;lorussie &agrave; l Est, grand alli&eacute; de la Russie, et Kaliningrad, &agrave; l Ouest, cette petite enclave russe au bord de la mer Baltique.</p><p>>> Retrouvez Europe Matin en replay et en podcast ici<p>Elle sert de poste militaire avanc&eacute; : Moscou y entasse tous les armements possibles, notamment une marine surpuissante avec les plus de 70 navires et sous-marins de la flotte de la Baltique. Depuis l offensive en Ukraine, des missiles hypersoniques et m&ecirc;me des missiles &agrave; t&ecirc;te nucl&eacute;aires dont Moscou a simul&eacute; des tirs en mai dernier.</p><p>Cyber-attaque intensive<br />Tout cet armement, sert &agrave; menacer lOccident, et directement la Lituanie, o&ugrave; passe le corridor de Suwalki, qui relie donc la Russie &agrave; ce territoire strat&eacute;gique. Une &eacute;pine dans le pied de lOccident et de lOtan. Cet affrontement est feutr&eacute; pour linstant. Les Lituaniens lont v&eacute;cu lundi. Les autorit&eacute;s ont d&eacute;clar&eacute; avoir &eacute;t&eacute; la cible dune cyber-attaque intensive. Une attaque qui a entra&icirc;n&eacute; larr&ecirc;t de...</p>',
         date: '24 dec 2021',
@@ -195,8 +196,9 @@ const articles = [
     },
     {
         id: 15,
-        link: '/images/science3.jpg',
-        image: '/images/science3.jpg',
+        link: '/images/science1.jpg',
+        image: '/images/science1.jpg',
+
         category: 'science',
         categoryIcon: '/images/lamp35.png',
         title: 'Dans des expériences de contrôle',

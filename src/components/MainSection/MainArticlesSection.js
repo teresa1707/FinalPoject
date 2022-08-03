@@ -23,7 +23,7 @@ export const MainArticlesSection = () => {
                     fullText,
                 }) => (
                     <MainArticlesItem
-                        id={id}
+                        key={id}
                         link={link}
                         image={image}
                         categoryIcon={categoryIcon}

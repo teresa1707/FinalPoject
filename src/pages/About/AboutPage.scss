@@ -1,0 +1,83 @@
+.container {
+    overflow-x: hidden;
+}
+.app-header {
+    padding-right: 40px;
+}
+.app-title {
+    color: #888;
+    margin: 10px;
+
+    h1 {
+        font-size: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        // color: #879aff;
+        color: rgb(147, 151, 158);
+        font-size: 21px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px;
+        padding-left: 45px;
+        margin-left: -20px;
+        border-left: 5px solid orangered;
+    }
+
+    p {
+        font-weight: 200;
+        opacity: 0.7;
+        font-size: 80%;
+    }
+}
+.body-content {
+    padding-bottom: 25px;
+}
+.app-card-list {
+    display: inline-block;
+    width: 100%;
+    min-height: 75vh;
+    white-space: normal;
+    overflow-x: scroll;
+    margin-top: -70px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        width: 80%;
+        white-space: nowrap;
+        margin-top: 0;
+    }
+
+    .card {
+        margin: 20px 30px;
+        min-width: 300px;
+        padding: 20px;
+        display: inline-block;
+        border-radius: 10px;
+        .card-header {
+            img {
+                max-width: 5O0px;
+                max-height: 350px;
+                margin: 20px;
+                border-radius: 10px;
+            }
+            .card-header--title {
+                color: rgb(147, 151, 158);
+                margin: 0 20px;
+            }
+        }
+
+        .card-body {
+            white-space: normal;
+            margin: 20px;
+
+            h2 {
+                color: rgb(88, 90, 94);
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}

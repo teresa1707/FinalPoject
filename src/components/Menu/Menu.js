@@ -3,7 +3,8 @@ import { Link, NavLink, Outlet } from 'react-router-dom'
 import articles from 'utils/ArticlesArray'
 import './Menu.scss'
 
-export const Menu = () => {
+export const Menu = ({ id = articles.id, category = articles.category }) => {
+    console.log(articles.category)
     return (
         <>
             <div className="menu">
@@ -15,16 +16,16 @@ export const Menu = () => {
                             </NavLink>
                         </li>
                         <li className="dropdown">
-                            <a className="nav-item">Category</a>
+                            <div className="nav-item">Category</div>
                             <div className="dropdown-content">
-                                <Link to={`/history`}>History</Link>
-                                <Link to={`/art`}>Art</Link>
-                                <Link to={`/science`}>Science</Link>
+                                <Link to={`/${category}`}>History</Link>
+                                <Link to="/art">Art</Link>
+                                <Link to="/science">Science</Link>
                             </div>
                         </li>
                         <li className="li">
-                            <NavLink to="/gallery" className="nav-item">
-                                gallery
+                            <NavLink to="/about" className="nav-item">
+                                about us
                             </NavLink>
                         </li>
                         <li className="li">

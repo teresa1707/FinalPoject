@@ -27,7 +27,7 @@ export const SocialMedia = () => {
                 />
                 <FiTwitter
                     className="img"
-                    style={{ color: 'blue', fontSize: 20 }}
+                    style={{ color: 'brown', fontSize: 20 }}
                 />
             </a>
             <a className="social" href="#" target="_blank">
@@ -38,9 +38,8 @@ export const SocialMedia = () => {
                 <FaYoutube
                     className="img"
                     style={{
-                        color: 'red',
-
-                        fontSize: 25,
+                        color: 'brown',
+                        fontSize: 23,
                     }}
                 />
             </a>
@@ -49,16 +48,15 @@ export const SocialMedia = () => {
                     className="img"
                     style={{
                         color: 'brown',
-
-                        fontSize: 25,
+                        fontSize: 23,
                     }}
                 />
                 <FaLinkedin
                     className="img"
                     style={{
-                        color: 'red',
+                        color: 'brown',
 
-                        fontSize: 25,
+                        fontSize: 23,
                     }}
                 />
             </a>
@@ -73,15 +71,15 @@ export const SocialMedia = () => {
                     style={{
                         color: 'brown',
 
-                        fontSize: 25,
+                        fontSize: 23,
                     }}
                 />
                 <FaPinterest
                     className="img"
                     style={{
-                        color: 'red',
+                        color: 'brown',
 
-                        fontSize: 25,
+                        fontSize: 23,
                     }}
                 />
             </a>

@@ -13,12 +13,8 @@
     border: 1px solid rgb(240, 237, 233);
     box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
         7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
-}
-.navigationButtons a {
-    padding: 10px;
     margin: 8px;
     border-radius: 50px;
-    border: 1px solid rgb(240, 237, 233);
     color: #5b422c;
     cursor: pointer;
 }
@@ -33,10 +29,10 @@
     background-color: rgb(214, 207, 197);
 }
 
-.navigationDisabled a {
-    // color: grey;
-    // background-color: grey;
-}
+// .navigationDisabled a {
+//     color: grey;
+//     background-color: grey;
+// }
 
 //style
 
@@ -78,22 +74,22 @@
 
 .list2-item-cat .rank-cat {
     position: relative;
+    top: 15px;
+    left: 6px;
     min-width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
     border-radius: 50%;
     margin-right: 10px;
 }
+.heart {
+    color: white;
+    font-size: 20px;
+}
 
-.list2-item-cat .rank-cat span {
-    position: relative;
-    left: 7px;
-    top: 3px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
+.heart:hover {
+    color: red;
 }
 .list2-item-cat:hover::before {
     background-color: #d9cdae;
@@ -101,9 +97,9 @@
 //category icon
 .list1-item-cat {
     position: relative;
+    padding-top: 6px;
+    top: 10px;
     display: flex;
-    align-items: center;
-    margin: 20px 0;
     cursor: pointer;
 }
 
@@ -144,9 +140,8 @@
 
 .list1-item-cat .name-cat {
     position: relative;
-    top: -10px;
+    top: -45px;
     left: 10px;
-    line-height: 1.3rem;
 }
 .list1-item-cat .name-cat h4 {
     font-weight: 600;
@@ -195,7 +190,7 @@
         }
     }
     .art-content {
-        padding: 20px 10px;
+        padding: 20px 30px;
         width: calc(100% - 20px);
         background: #fff;
         position: relative;
@@ -216,7 +211,6 @@
         .art-author-wrap {
             .art-author-name {
                 color: #8d99ae;
-
                 transition: color 0.3s ease;
                 text-decoration: none;
                 &:hover {

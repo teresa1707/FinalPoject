@@ -5,7 +5,7 @@ import 'pages/Category/Category.scss'
 import ArticlesArray from 'utils/ArticlesArray'
 import { Grid } from '@mui/material'
 import ReactPaginate from 'react-paginate'
-import { HistoryPageItem } from './HistoryPageItem'
+
 import { CategoryItem } from '../CategoryItem'
 import { FollowUs } from 'components/FollowUs/FollowUs'
 
@@ -25,7 +25,7 @@ export const HistoryCategoryPage = () => {
     }
     return (
         <>
-            <Grid container spacing={2}>
+            <Grid container spacing={4}>
                 <Grid item sm={12} md={9}>
                     <Grid
                         container

@@ -1,5 +1,9 @@
-//dark section
+//Card style
+Card {
+    padding: 40px;
+}
 
+//dark section
 .wrapper-dark {
     padding-bottom: 10px;
     background-image: linear-gradient(
@@ -8,27 +12,44 @@
         #a35410 55%,
         #ababad 100%
     );
+    border-bottom: 1px solid
+        linear-gradient(90deg, #8f8f97 0%, #a35410 55%, #ababad 100%);
     // border-top: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 12px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    overflow: hidden;
+}
+.wrapper-dark-bottom {
+    padding-bottom: 20px;
+    border-bottom: 1px solid
+        linear-gradient(90deg, #8f8f97 0%, #a35410 55%, #ababad 100%);
+
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    overflow: hidden;
 }
 .wrapper {
     background-color: #f5f4f3;
 }
-
+.article {
+    margin: 20px;
+}
 .p-dark {
-    color: rgba(255, 255, 255, 0.6);
+    color: #806d3c;
     font-weight: 100;
     font-size: 13px;
     line-height: 17px;
-    padding-bottom: 10px;
+    padding-left: 5px;
     margin-bottom: 10px;
 }
 
 //main section
 .title {
     font-size: 40px;
-    // color: #d6bf86;
-    // color: #879aff; //blue sky
     color: rgb(87, 107, 158);
     text-align: center;
     padding: 50px 0;
@@ -48,9 +69,8 @@
     font-size: 21px;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 10px;
-    padding-left: 45px;
-    margin-left: -20px;
+    padding: 20px;
+    padding-left: 35px;
     border-left: 5px solid orangered;
 }
 .italic {
@@ -101,6 +121,11 @@ p {
 .wrapper-beige {
     background-color: #dfd7c6;
     padding: 15px;
+    -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    overflow: hidden;
 }
 
 .footer {

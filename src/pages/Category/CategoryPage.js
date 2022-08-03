@@ -8,8 +8,6 @@ import ReactPaginate from 'react-paginate'
 import { CategoryItem } from './CategoryItem'
 import { FollowUs } from 'components/FollowUs/FollowUs'
 import 'components/FollowUs/FollowUs.scss'
-import articles from 'utils/ArticlesArray'
-import { DarkSecond } from 'components/MainDarkSection/DarkSecond'
 
 export const CategoryPage = () => {
     const [page, setPage] = useState(0)
@@ -18,13 +16,11 @@ export const CategoryPage = () => {
     const [filter, setFilter] = useState({})
 
     const filterByCategory = (articles) => {
-        if (articles.categoryItem === '/images/rome25.png') {
-            return articles.category === 'history'
-        } else if (articles.categoryItem === '/images/lamp35.png') {
-            return articles.category === 'science'
-        } else {
-            return articles.category === 'art'
-        }
+        category === 'art'
+            ? articles.category === 'art'
+            : category === 'history'
+            ? articles.category === 'history'
+            : articles.category === 'science'
     }
 
     const articlesPerPage = 4

@@ -27,42 +27,71 @@ export const MainArticlesItem = ({
                     md={6}
                     className="title3-photo title3-container"
                 >
-                    <figure className="snip">
-                        <img src={image} alt="sample41" />
-                        <figcaption>
-                            {/* <h2 className="title3">{title}</h2> */}
-                            <h2>
+                    <div id="img-1">
+                        <div className="img-block1">
+                            <p className="plus">
                                 {date}-{author}
-                            </h2>
-
-                            <Link to={`/articles/${category}/${id}`}>
-                                <p>read more...</p>
+                            </p>
+                        </div>
+                        <div className="img-block">
+                            <Link
+                                className="plus"
+                                to={`/${category}/${id}`}
+                                style={{
+                                    padding: 5,
+                                    fontSize: 20,
+                                    textDecoration: 'none',
+                                }}
+                            >
+                                find out more...
                             </Link>
-                        </figcaption>
-                    </figure>
+                        </div>
+                        <img id="image" src={image} alt="sample41" />
+                    </div>
                 </Grid>
 
-                <Grid item xs={12} md={6} className="title3-container gridItem">
+                <Grid item xs={12} md={6} className="title3-container ">
                     <div className="inline">
                         <div className="list1-item">
-                            <Link to={`/${category}`}>
+                            <Link
+                                to={`/${category}`}
+                                style={{
+                                    textDecoration: 'none',
+                                }}
+                            >
                                 <div className="rank">
                                     <span>
                                         <img src={categoryIcon} alt="" />
                                     </span>
                                 </div>
                             </Link>
-                            <Link to={`/articles/${category}/${id}`}>
+                            <Link
+                                to={`/articles/${category}/${id}`}
+                                style={{
+                                    textDecoration: 'none',
+                                }}
+                            >
                                 {' '}
                                 <div className="name">
-                                    <h2 className="title3-card gridItem">
+                                    <h2
+                                        className="title3-card "
+                                        style={{
+                                            paddingLeft: '20px',
+                                            lineHeight: '17px',
+                                        }}
+                                    >
                                         {title}
                                     </h2>
                                 </div>
                             </Link>
                         </div>
                     </div>
-                    <Link to={`/articles/${category}/${id}`}>
+                    <Link
+                        to={`/articles/${category}/${id}`}
+                        style={{
+                            textDecoration: 'none',
+                        }}
+                    >
                         {' '}
                         <div className="text">
                             <p>{text}</p>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Grid } from '@mui/material'
-import unlike from 'Assets/Heart-white1-23.png'
 import 'pages/Category/Category.scss'
 import 'styles/Main.scss'
 import 'styles/grid.scss'
@@ -61,8 +60,13 @@ export const ArticleItem = ({
                                 </div>
                             </div>
 
-                            <div className="art-text">
-                                <p>{articlesObject[id].fullText}</p>
+                            <div
+                                className="art-text"
+                                dangerouslySetInnerHTML={{
+                                    __html: articlesObject[id].fullText,
+                                }}
+                            >
+                                {articlesObject[id].fullText}
                             </div>
                             <div className="list2-item-cat">
                                 <div className="rank-cat">

@@ -22,7 +22,7 @@ export const CategoryItem = ({
 }) => {
     return (
         <>
-            <Grid className="col-style-cat art-grid ">
+            <Grid className="art-grid ">
                 <div className="art-item">
                     <div className="art-item-box">
                         <Link to={`/articles/${category}/${id}`}>
@@ -61,10 +61,7 @@ export const CategoryItem = ({
                             </div>
                             <div className="list2-item-cat">
                                 <div className="rank-cat">
-                                    <FaHeart
-                                        className="heart"
-                                        style={{ fontSize: 20 }}
-                                    />
+                                    <FaHeart className="heart" />
                                 </div>
                             </div>
                         </div>

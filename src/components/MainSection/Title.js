@@ -4,8 +4,8 @@ import './TitleCutPaper.scss'
 
 const Text = ({ value }) => (
     <div className="text1">
-        {value.split('').map((char) => (
-            <div className="letter">
+        {value.split('').map((char, id) => (
+            <div className="letter" key={id}>
                 <span className="source">{char}</span>
                 <span className="shadow">{char}</span>
                 <span className="overlay">{char}</span>
@@ -16,8 +16,6 @@ const Text = ({ value }) => (
 
 export const Title = () => (
     <div className="app">
-        <Text value="Welcome . to . my . website . React" />
+        <Text value="put your text here" />
     </div>
 )
-
-// ReactDOM.render(<Title />, document.body)

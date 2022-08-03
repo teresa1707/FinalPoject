@@ -3,6 +3,7 @@ import React from 'react'
 import { Button, ButtonToolbar, Modal } from 'rsuite'
 import './Modal.scss'
 import '../../container/Slider/swiper.css'
+import { CardContent } from '@mui/material'
 
 export const ModalWindow = () => {
     const [open, setOpen] = React.useState(false)
@@ -11,7 +12,7 @@ export const ModalWindow = () => {
     const handleClose = () => setOpen(false)
 
     return (
-        <div className="modal-container">
+        <CardContent className="modal-container">
             <Modal
                 className="modal"
                 keyboard={false}
@@ -73,6 +74,6 @@ export const ModalWindow = () => {
                     Wright us
                 </Button>
             </ButtonToolbar>
-        </div>
+        </CardContent>
     )
 }
