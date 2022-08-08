@@ -49,7 +49,7 @@ export const MainDarkSection = () => {
                     </Grid>
                 </Grid>
             </Container>
-            <div className="wrapper-dark-bottom"></div>
+            <div className="wrapper-dark-bottom" style={{ height: 15 }}></div>
         </>
     )
 }

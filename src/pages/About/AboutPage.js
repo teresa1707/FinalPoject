@@ -1,4 +1,4 @@
-import { Card, Container, Grid, SliderInput } from '@mui/material'
+import { Card, Container, Grid } from '@mui/material'
 import { FollowUs } from 'components/FollowUs/FollowUs'
 import React from 'react'
 import './AboutPage.scss'
@@ -55,7 +55,7 @@ export class AboutPage extends React.Component {
             posts: {},
         }
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.setState({
             posts: PostsData,
         })

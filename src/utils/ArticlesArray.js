@@ -486,8 +486,6 @@ const articles = [
     },
 ]
 
-export default articles
-
 export const getArticlesObject = (array) =>
     array.reduce(
         (obj, article) => ({
@@ -496,3 +494,5 @@ export const getArticlesObject = (array) =>
         }),
         {}
     )
+
+export default articles

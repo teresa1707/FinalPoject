@@ -27,7 +27,7 @@ export const ArticleItem = ({
                                 rel="noreferrer"
                             >
                                 <img
-                                    alt={articlesObject[id].title}
+                                    alt="photo"
                                     className="art-img"
                                     src={articlesObject[id].image}
                                 />
@@ -38,7 +38,7 @@ export const ArticleItem = ({
                                 {articlesObject[id].author}
                                 <span className="art-separator">//</span>
                                 {articlesObject[id].date}
-                                {articlesObject[id].id}
+                                {articlesObject[id].category}
                             </div>
 
                             <div className="list1-item-cat">
@@ -62,9 +62,9 @@ export const ArticleItem = ({
 
                             <div
                                 className="art-text"
-                                dangerouslySetInnerHTML={{
-                                    __html: articlesObject[id].fullText,
-                                }}
+                                // dangerouslySetInnerHTML={{
+                                //     __html: articlesObject[id].fullText,
+                                // }}
                             >
                                 {articlesObject[id].fullText}
                             </div>

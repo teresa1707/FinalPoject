@@ -12,12 +12,11 @@ import { CategoryItem } from '../CategoryItem'
 
 export const ScienceCategoryPage = () => {
     const [page, setPage] = useState(0)
-    const [artics, setArtics] = useState(ArticlesArray)
 
     const articlesPerPage = 4
     const numberOfArticlesVisited = page * articlesPerPage
     const totalPages = Math.ceil(
-        artics.filter(
+        ArticlesArray.filter(
             (article) => article.categoryIcon === '/images/lamp35.png'
         ).length / articlesPerPage
     )
@@ -33,12 +32,10 @@ export const ScienceCategoryPage = () => {
                         spacing={{ xs: 2, md: 3 }}
                         columns={{ xs: 4, sm: 8, md: 12 }}
                     >
-                        {artics
-                            .filter(
-                                (articles) =>
-                                    articles.categoryIcon ===
-                                    '/images/lamp35.png'
-                            )
+                        {ArticlesArray.filter(
+                            (article) =>
+                                article.categoryIcon === '/images/lamp35.png'
+                        )
                             .slice(
                                 numberOfArticlesVisited,
                                 numberOfArticlesVisited + articlesPerPage

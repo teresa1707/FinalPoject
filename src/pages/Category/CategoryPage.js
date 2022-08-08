@@ -8,25 +8,25 @@ import ReactPaginate from 'react-paginate'
 import { CategoryItem } from './CategoryItem'
 import { FollowUs } from 'components/FollowUs/FollowUs'
 import 'components/FollowUs/FollowUs.scss'
+import articles from 'utils/ArticlesArray'
 
-export const CategoryPage = () => {
+const CategoryPage = () => {
     const [page, setPage] = useState(0)
-    const [artics, setArtics] = useState(ArticlesArray)
 
-    const [filter, setFilter] = useState({})
-
-    const filterByCategory = (articles) => {
-        category === 'art'
-            ? articles.category === 'art'
-            : category === 'history'
-            ? articles.category === 'history'
-            : articles.category === 'science'
-    }
+    // const filterArt = articles
+    //     .filter((articles) => articles.categoryItem === '/images/mask35.png')
+    //     .map((article) => article)
+    // const filterHistory = articles.filter(
+    //     (article) => article.categoryItem === '/images/rome25.png'
+    // )
+    // const filterScience = articles.filter(
+    //     (article) => article.categoryItem === '/images/lamp35.png'
+    // )
 
     const articlesPerPage = 4
     const numberOfArticlesVisited = page * articlesPerPage
     const totalPages = Math.ceil(
-        artics.filter((article) => article.categoryIcon).length /
+        ArticlesArray.filter((article) => article.categoryIcon).length /
             articlesPerPage
     )
     const changePage = ({ selected }) => {
@@ -42,37 +42,48 @@ export const CategoryPage = () => {
                         spacing={{ xs: 2, md: 3 }}
                         columns={{ xs: 4, sm: 8, md: 12 }}
                     >
-                        {artics
-                            .filter(filterByCategory)
-                            .slice(
-                                numberOfArticlesVisited,
-                                numberOfArticlesVisited + articlesPerPage
-                            )
-                            .map(
-                                ({
-                                    id,
-                                    link,
-                                    image,
-                                    categoryIcon,
-                                    title,
-                                    text,
-                                    date,
-                                    author,
-                                }) => (
-                                    <Grid item xs={12} md={6} key={id}>
-                                        <CategoryItem
-                                            id={id}
-                                            link={link}
-                                            image={image}
-                                            categoryIcon={categoryIcon}
-                                            title={title}
-                                            text={text}
-                                            date={date}
-                                            author={author}
-                                        />
-                                    </Grid>
-                                )
-                            )}
+                        {articles.filter(
+                            (article) => article.category === 'art'
+                        )
+                            ? articles.filter(
+                                  (article) => article.category === 'history'
+                              )
+                            : articles
+                                  .filter(
+                                      (article) =>
+                                          article.category === 'science'
+                                  )
+                                  .slice(
+                                      numberOfArticlesVisited,
+                                      numberOfArticlesVisited + articlesPerPage
+                                  )
+                                  .map(
+                                      ({
+                                          id,
+                                          link,
+                                          image,
+                                          categoryIcon,
+                                          title,
+                                          text,
+                                          date,
+                                          author,
+                                          category,
+                                      }) => (
+                                          <Grid item xs={12} md={6} key={id}>
+                                              <CategoryItem
+                                                  id={id}
+                                                  link={link}
+                                                  image={image}
+                                                  categoryIcon={categoryIcon}
+                                                  title={title}
+                                                  text={text}
+                                                  date={date}
+                                                  author={author}
+                                                  category={category}
+                                              />
+                                          </Grid>
+                                      )
+                                  )}
                     </Grid>
                 </Grid>
                 <Grid item sm={12} md={3}>

@@ -6,6 +6,7 @@ import './Images.scss'
 import '../../components/Title-categories/Icon.scss'
 import '../../components/Title-categories/Like.scss'
 import { Link } from 'react-router-dom'
+import VisuallyHidden from '@reach/visually-hidden'
 import { FaHeart } from 'react-icons/fa'
 
 export const MainArticlesItem = ({
@@ -20,7 +21,7 @@ export const MainArticlesItem = ({
 }) => {
     return (
         <>
-            <Grid container className="col-style" key={id}>
+            <Grid container className="col-style">
                 <Grid
                     item
                     xs={12}
@@ -30,19 +31,20 @@ export const MainArticlesItem = ({
                     <div id="img-1">
                         <div className="img-block1">
                             <p className="plus">
-                                {date}-{author}
+                                {date}-{author}-{id}
                             </p>
                         </div>
                         <div className="img-block">
                             <Link
                                 className="plus"
-                                to={`/${category}/${id}`}
+                                to={`/article/${title}`}
                                 style={{
                                     padding: 5,
                                     fontSize: 20,
                                     textDecoration: 'none',
                                 }}
                             >
+                                <VisuallyHidden>{title}</VisuallyHidden>
                                 find out more...
                             </Link>
                         </div>
@@ -54,7 +56,7 @@ export const MainArticlesItem = ({
                     <div className="inline">
                         <div className="list1-item">
                             <Link
-                                to={`/${category}`}
+                                to={`${category}`}
                                 style={{
                                     textDecoration: 'none',
                                 }}
@@ -65,39 +67,22 @@ export const MainArticlesItem = ({
                                     </span>
                                 </div>
                             </Link>
-                            <Link
-                                to={`/articles/${category}/${id}`}
-                                style={{
-                                    textDecoration: 'none',
-                                }}
-                            >
-                                {' '}
-                                <div className="name">
-                                    <h2
-                                        className="title3-card "
-                                        style={{
-                                            paddingLeft: '20px',
-                                            lineHeight: '17px',
-                                        }}
-                                    >
-                                        {title}
-                                    </h2>
-                                </div>
-                            </Link>
+                            <div className="name">
+                                <h2
+                                    className="title3-card "
+                                    style={{
+                                        paddingLeft: '20px',
+                                        lineHeight: '17px',
+                                    }}
+                                >
+                                    {title}
+                                </h2>
+                            </div>
                         </div>
+                    </div>{' '}
+                    <div className="text">
+                        <p>{text}</p>
                     </div>
-                    <Link
-                        to={`/articles/${category}/${id}`}
-                        style={{
-                            textDecoration: 'none',
-                        }}
-                    >
-                        {' '}
-                        <div className="text">
-                            <p>{text}</p>
-                        </div>
-                    </Link>
-
                     <div className="list2-item">
                         <div className="rank">
                             <span>

@@ -25,15 +25,9 @@ export const CategoryItem = ({
             <Grid className="art-grid ">
                 <div className="art-item">
                     <div className="art-item-box">
-                        <Link to={`/articles/${category}/${id}`}>
-                            <div className="art-img-wrap">
-                                <img
-                                    alt={title}
-                                    className="art-img"
-                                    src={image}
-                                />
-                            </div>
-                        </Link>
+                        <div className="art-img-wrap">
+                            <img alt={title} className="art-img" src={image} />
+                        </div>
 
                         <div className="art-content">
                             <div className="art-meta">
@@ -50,9 +44,11 @@ export const CategoryItem = ({
                                 </div>
 
                                 <div className="name-cat">
-                                    <h2 className="title3-card gridItem">
-                                        {title}
-                                    </h2>
+                                    <Link to={`/article/${id}`}>
+                                        <h2 className="title3-card gridItem">
+                                            {title}
+                                        </h2>
+                                    </Link>
                                 </div>
                             </div>
 
