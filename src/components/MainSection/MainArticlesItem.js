@@ -6,7 +6,7 @@ import './Images.scss'
 import '../../components/Title-categories/Icon.scss'
 import '../../components/Title-categories/Like.scss'
 import { Link } from 'react-router-dom'
-import VisuallyHidden from '@reach/visually-hidden'
+
 import { FaHeart } from 'react-icons/fa'
 
 export const MainArticlesItem = ({
@@ -44,7 +44,6 @@ export const MainArticlesItem = ({
                                     textDecoration: 'none',
                                 }}
                             >
-                                <VisuallyHidden>{title}</VisuallyHidden>
                                 find out more...
                             </Link>
                         </div>

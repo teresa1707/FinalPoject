@@ -1,0 +1,116 @@
+//style
+
+.heart {
+    color: white;
+    font-size: 20px;
+}
+
+.heart:hover {
+    color: red;
+}
+.list2-item-cat:hover::before {
+    background-color: #d9cdae;
+}
+
+///////
+
+.artGrid {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+
+    .artItemImg {
+        text-align: center;
+        top: 20px;
+        position: relative;
+        z-index: 1;
+    }
+    .artImg {
+        border-radius: 10px;
+        width: 70%;
+        height: 70%;
+    }
+}
+.art-content {
+    margin: 30px 35px;
+    padding: 20px 30px;
+    width: 90%;
+
+    background: #fff;
+    position: relative;
+    top: -60px;
+    border-radius: 10px;
+}
+
+.art-meta {
+    color: #8d99ae;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 30px 65px;
+    .art-separator {
+        margin: 0 6px;
+    }
+}
+.art-meta:hover {
+    color: #2b2d42;
+}
+.art-text {
+    font-size: 14px;
+    padding: 15px 0;
+}
+.list1-item-art {
+    position: relative;
+    display: flex;
+    margin: 15px 0;
+    cursor: pointer;
+    top: -5px;
+    left: 25px;
+    width: 90%;
+    height: 50px;
+    background: #dcdad3;
+    border-radius: 22.5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25),
+        inset 1px 1px 1px rgba(255, 255, 255, 0.5),
+        inset -1px -1px 1px rgba(60, 52, 52, 0.5);
+}
+
+.list1-item-art .rank {
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.list1-item-art .rank span {
+    position: relative;
+    top: 3px;
+    left: 9px;
+}
+
+.list1-item-art:hover {
+    background-color: #d9cdae;
+}
+
+.list1-item-art .title3-card {
+    margin-top: 10px;
+}
+
+.frame {
+    border: 1em solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 570px) {
+    .list1-item-art .title3-card {
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 15px;
+    }
+}

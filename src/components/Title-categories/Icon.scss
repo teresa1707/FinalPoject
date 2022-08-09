@@ -12,7 +12,7 @@
     top: -12px;
     left: 25px;
     width: 65px;
-    min-height: 50px;
+    height: 50px;
     background: #dcdad3;
     border-radius: 22.5px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25),
@@ -35,29 +35,8 @@
     position: relative;
     top: 3px;
     left: 9px;
-    transition: 0.5s;
 }
 
-.list1-item .name {
-    position: relative;
-    line-height: 1.15rem;
-}
-
-.list1-item .name h4 {
-    font-weight: 600;
-    color: #bcbcc0;
-    transition: 0.5s;
-}
-
-.list1-item .name p {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: #95999d;
-    transition: 0.5s;
-}
-.list1-item:hover::before {
+.list1-item:hover {
     background-color: #d9cdae;
-}
-.heart:hover {
-    color: red;
 }

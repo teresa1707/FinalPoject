@@ -35,61 +35,50 @@ const CategoryPage = () => {
 
     return (
         <>
-            <Grid container spacing={2}>
-                <Grid item sm={12} md={9}>
-                    <Grid
-                        container
-                        spacing={{ xs: 2, md: 3 }}
-                        columns={{ xs: 4, sm: 8, md: 12 }}
-                    >
-                        {articles.filter(
-                            (article) => article.category === 'art'
-                        )
-                            ? articles.filter(
-                                  (article) => article.category === 'history'
+            <Grid
+                container
+                spacing={{ xs: 2, md: 3 }}
+                columns={{ xs: 4, sm: 8, md: 12 }}
+            >
+                {articles.filter((article) => article.category === 'art')
+                    ? articles.filter(
+                          (article) => article.category === 'history'
+                      )
+                    : articles
+                          .filter((article) => article.category === 'science')
+                          .slice(
+                              numberOfArticlesVisited,
+                              numberOfArticlesVisited + articlesPerPage
+                          )
+                          .map(
+                              ({
+                                  id,
+                                  link,
+                                  image,
+                                  categoryIcon,
+                                  title,
+                                  text,
+                                  date,
+                                  author,
+                                  category,
+                              }) => (
+                                  <Grid item xs={12} md={6} key={id}>
+                                      <CategoryItem
+                                          id={id}
+                                          link={link}
+                                          image={image}
+                                          categoryIcon={categoryIcon}
+                                          title={title}
+                                          text={text}
+                                          date={date}
+                                          author={author}
+                                          category={category}
+                                      />
+                                  </Grid>
                               )
-                            : articles
-                                  .filter(
-                                      (article) =>
-                                          article.category === 'science'
-                                  )
-                                  .slice(
-                                      numberOfArticlesVisited,
-                                      numberOfArticlesVisited + articlesPerPage
-                                  )
-                                  .map(
-                                      ({
-                                          id,
-                                          link,
-                                          image,
-                                          categoryIcon,
-                                          title,
-                                          text,
-                                          date,
-                                          author,
-                                          category,
-                                      }) => (
-                                          <Grid item xs={12} md={6} key={id}>
-                                              <CategoryItem
-                                                  id={id}
-                                                  link={link}
-                                                  image={image}
-                                                  categoryIcon={categoryIcon}
-                                                  title={title}
-                                                  text={text}
-                                                  date={date}
-                                                  author={author}
-                                                  category={category}
-                                              />
-                                          </Grid>
-                                      )
-                                  )}
-                    </Grid>
-                </Grid>
-                <Grid item sm={12} md={3}>
-                    <FollowUs className="followUs-style-in-grid" />
-                </Grid>
+                          )}
             </Grid>
+
             {/*  */}
             <ReactPaginate
                 previousLabel={'Previous'}

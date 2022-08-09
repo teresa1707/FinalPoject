@@ -1,11 +1,8 @@
 import React from 'react'
 import { Grid } from '@mui/material'
-import 'pages/Category/Category.scss'
-import 'styles/Main.scss'
-import 'styles/grid.scss'
-import 'components/MainSection/Images.scss'
 import 'components/Title-categories/Icon.scss'
 import 'components/Title-categories/Like.scss'
+import 'components/Article/ArticleItem.scss'
 import { FaHeart } from 'react-icons/fa'
 import { useParams } from 'react-router-dom'
 import articles, { getArticlesObject } from 'utils/ArticlesArray'
@@ -17,10 +14,10 @@ export const ArticleItem = ({
 
     return (
         <>
-            <Grid container className="col-style-cat art-grid ">
+            <Grid container className="artGrid ">
                 <div className="art-item">
                     <div className="art-item-box">
-                        <div className="art-img-wrap">
+                        <div className="artItemImg">
                             <a
                                 href={articlesObject[id].link}
                                 target="_blank"
@@ -28,21 +25,21 @@ export const ArticleItem = ({
                             >
                                 <img
                                     alt="photo"
-                                    className="art-img"
+                                    className="artImg frame"
                                     src={articlesObject[id].image}
                                 />
                             </a>
                         </div>
-                        <div className="art-content">
+
+                        <div className="art-content frame">
                             <div className="art-meta">
                                 {articlesObject[id].author}
                                 <span className="art-separator">//</span>
                                 {articlesObject[id].date}
                                 {articlesObject[id].category}
                             </div>
-
-                            <div className="list1-item-cat">
-                                <div className="rank-cat">
+                            <div className="list1-item-art">
+                                <div className="rank">
                                     <span className="catIcon">
                                         <img
                                             src={
@@ -53,11 +50,9 @@ export const ArticleItem = ({
                                     </span>
                                 </div>
 
-                                <div className="name-cat">
-                                    <h2 className="title3-card gridItem">
-                                        {articlesObject[id].title}
-                                    </h2>
-                                </div>
+                                <h2 className="title3-card">
+                                    {articlesObject[id].title}
+                                </h2>
                             </div>
 
                             <div
@@ -68,8 +63,8 @@ export const ArticleItem = ({
                             >
                                 {articlesObject[id].fullText}
                             </div>
-                            <div className="list2-item-cat">
-                                <div className="rank-cat">
+                            <div className="list2-item">
+                                <div className="rank">
                                     <span>
                                         <FaHeart
                                             className="heart"
