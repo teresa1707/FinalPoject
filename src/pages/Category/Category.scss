@@ -161,6 +161,10 @@
 ///////
 
 .art-grid {
+    margin-top: 30px;
+    margin-left: 20px;
+    width: calc(100% - 20px);
+
     .art-item {
         display: flex;
         overflow: hidden;
@@ -189,12 +193,14 @@
             transition: all 2s ease;
         }
     }
-    .art-content {
+    .art-category {
         padding: 20px 30px;
+        height: 400px;
         width: calc(100% - 20px);
         background: #fff;
         position: relative;
         border-radius: 10px;
+
         top: -40px;
     }
 

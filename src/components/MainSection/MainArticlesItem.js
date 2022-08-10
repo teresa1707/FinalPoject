@@ -37,13 +37,14 @@ export const MainArticlesItem = ({
                         <div className="img-block">
                             <Link
                                 className="plus"
-                                to={`/article/${title}`}
+                                to={`${id}`}
                                 style={{
                                     padding: 5,
                                     fontSize: 20,
                                     textDecoration: 'none',
                                 }}
                             >
+                                {title}
                                 find out more...
                             </Link>
                         </div>

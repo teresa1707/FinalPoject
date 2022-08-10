@@ -29,7 +29,7 @@ export const CategoryItem = ({
                             <img alt={title} className="art-img" src={image} />
                         </div>
 
-                        <div className="art-content">
+                        <div className="art-category">
                             <div className="art-meta">
                                 {author}
                                 <span className="art-separator">//</span>
@@ -44,7 +44,10 @@ export const CategoryItem = ({
                                 </div>
 
                                 <div className="name-cat">
-                                    <Link to={`/article/${id}`}>
+                                    <Link
+                                        to={`/${category}/${id}`}
+                                        style={{ textDecoration: 'none' }}
+                                    >
                                         <h2 className="title3-card gridItem">
                                             {title}
                                         </h2>

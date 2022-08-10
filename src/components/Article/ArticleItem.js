@@ -12,6 +12,8 @@ export const ArticleItem = ({
 }) => {
     let { id } = useParams()
 
+    let fullText = articlesObject[id].fullText
+
     return (
         <>
             <Grid container className="artGrid ">
@@ -57,12 +59,8 @@ export const ArticleItem = ({
 
                             <div
                                 className="art-text"
-                                // dangerouslySetInnerHTML={{
-                                //     __html: articlesObject[id].fullText,
-                                // }}
-                            >
-                                {articlesObject[id].fullText}
-                            </div>
+                                dangerouslySetInnerHTML={{ __html: fullText }}
+                            ></div>
                             <div className="list2-item">
                                 <div className="rank">
                                     <span>

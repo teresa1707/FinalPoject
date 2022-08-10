@@ -74,7 +74,7 @@ export const Main = () => {
                     />
 
                     <Route
-                        path="/article/:id"
+                        path="/:category/:id"
                         element={
                             <>
                                 <MainDarkSection />
