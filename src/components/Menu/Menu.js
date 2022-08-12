@@ -1,14 +1,19 @@
+import { Favorite } from 'components/Favorite/Favorite'
 import React from 'react'
-import { Link, NavLink, Outlet } from 'react-router-dom'
-import articles from 'utils/ArticlesArray'
+import { Link } from 'react-router-dom'
+
 import './Menu.scss'
 
-export const Menu = () => {
+export const Menu = ({ likedArticles }) => {
     return (
         <>
             <div className="menu">
                 <nav className="navigation">
                     <ul className="ul">
+                        <li className="li">
+                            <Favorite likedArticles={likedArticles} />
+                        </li>
+
                         <li className="li">
                             <Link to="/" className="nav-item">
                                 home

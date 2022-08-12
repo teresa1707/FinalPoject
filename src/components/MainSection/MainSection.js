@@ -6,7 +6,12 @@ import { MainColumnItems } from './MainColumnItems'
 import { MainArticlesSection } from './MainArticlesSection'
 import { Title } from './Title'
 
-export const MainSection = () => {
+export const MainSection = ({
+    toggleLikeState,
+    articleLikeState,
+    addLikedArticles,
+    likedArticles,
+}) => {
     return (
         <>
             <Container>
@@ -19,7 +24,12 @@ export const MainSection = () => {
                     </Grid>
 
                     <Grid item xs={12} md={9}>
-                        <MainArticlesSection />
+                        <MainArticlesSection
+                            toggleLikeState={toggleLikeState}
+                            articleLikeState={articleLikeState}
+                            addLikedArticles={addLikedArticles}
+                            likedArticles={likedArticles}
+                        />
                     </Grid>
                 </Grid>
             </Container>

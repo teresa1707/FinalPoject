@@ -6,7 +6,12 @@ import { MainArticlesItem } from './MainArticlesItem'
 
 import articles from 'utils/ArticlesArray'
 
-export const MainArticlesSection = () => {
+export const MainArticlesSection = ({
+    toggleLikeState,
+    articleLikeState,
+    addLikedArticles,
+    likedArticles,
+}) => {
     return (
         <>
             {articles
@@ -25,19 +30,25 @@ export const MainArticlesSection = () => {
                         category,
                         fullText,
                     }) => (
-                        <MainArticlesItem
-                            key={id}
-                            link={link}
-                            image={image}
-                            categoryIcon={categoryIcon}
-                            title={title}
-                            text={text}
-                            date={date}
-                            author={author}
-                            isHome={isHome}
-                            category={category}
-                            fullText={fullText}
-                        />
+                        <div key={id}>
+                            <MainArticlesItem
+                                id={id}
+                                link={link}
+                                image={image}
+                                categoryIcon={categoryIcon}
+                                title={title}
+                                text={text}
+                                date={date}
+                                author={author}
+                                isHome={isHome}
+                                category={category}
+                                fullText={fullText}
+                                toggleLikeState={toggleLikeState}
+                                isLiked={articleLikeState[id]}
+                                addLikedArticles={addLikedArticles}
+                                likedArticles={likedArticles}
+                            />
+                        </div>
                     )
                 )}
         </>

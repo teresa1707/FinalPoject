@@ -18,6 +18,9 @@ export const MainArticlesItem = ({
     date,
     author,
     category,
+    toggleLikeState,
+    isLiked = false,
+    addLikedArticles,
 }) => {
     return (
         <>
@@ -37,14 +40,13 @@ export const MainArticlesItem = ({
                         <div className="img-block">
                             <Link
                                 className="plus"
-                                to={`${id}`}
+                                to={`/${category}/${id}`}
                                 style={{
                                     padding: 5,
                                     fontSize: 20,
                                     textDecoration: 'none',
                                 }}
                             >
-                                {title}
                                 find out more...
                             </Link>
                         </div>
@@ -68,15 +70,25 @@ export const MainArticlesItem = ({
                                 </div>
                             </Link>
                             <div className="name">
-                                <h2
-                                    className="title3-card "
+                                <Link
+                                    className="plus"
+                                    to={`/${category}/${id}`}
                                     style={{
-                                        paddingLeft: '20px',
-                                        lineHeight: '17px',
+                                        padding: 5,
+                                        fontSize: 20,
+                                        textDecoration: 'none',
                                     }}
                                 >
-                                    {title}
-                                </h2>
+                                    <h2
+                                        className="title3-card "
+                                        style={{
+                                            paddingLeft: '20px',
+                                            lineHeight: '17px',
+                                        }}
+                                    >
+                                        {title}
+                                    </h2>
+                                </Link>
                             </div>
                         </div>
                     </div>{' '}
@@ -84,12 +96,22 @@ export const MainArticlesItem = ({
                         <p>{text}</p>
                     </div>
                     <div className="list2-item">
-                        <div className="rank">
+                        <div
+                            className="rank-cat"
+                            onClick={(event) => {
+                                toggleLikeState(id)
+                                addLikedArticles(id)
+                            }}
+                        >
                             <span>
-                                <FaHeart
-                                    className="heart"
-                                    style={{ fontSize: 20 }}
-                                />
+                                {isLiked ? (
+                                    <FaHeart
+                                        className="heart"
+                                        style={{ color: 'red' }}
+                                    />
+                                ) : (
+                                    <FaHeart className="heart" />
+                                )}
                             </span>
                         </div>
                     </div>

@@ -10,8 +10,15 @@ import { ScienceCategoryPage } from 'pages/Category/Science/ScienceCategoryPage'
 import Slider from 'container/Slider/Swiper'
 import { ArticleItem } from 'components/Article/ArticleItem'
 import { ArtCategoryPage } from 'pages/Category/Art/ArtCategoryPage'
+import { NoMatch } from 'pages/NoMatch/NoMatch'
+import { FavoritePage } from 'pages/FavoritePage/FavoritePage'
 
-export const Main = () => {
+export const Main = ({
+    toggleLikeState,
+    articleLikeState,
+    addLikedArticles,
+    likedArticles,
+}) => {
     return (
         <>
             <div className="wrapper">
@@ -22,7 +29,21 @@ export const Main = () => {
                             <>
                                 <Slider />
                                 <MainDarkSection />
-                                <MainSection />
+                                <MainSection
+                                    toggleLikeState={toggleLikeState}
+                                    articleLikeState={articleLikeState}
+                                    addLikedArticles={addLikedArticles}
+                                    likedArticles={likedArticles}
+                                />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/favorite"
+                        element={
+                            <>
+                                <MainDarkSection />
+                                <FavoritePage />
                             </>
                         }
                     />
@@ -50,7 +71,10 @@ export const Main = () => {
                         element={
                             <>
                                 <MainDarkSection />
-                                <HistoryCategoryPage />
+                                <HistoryCategoryPage
+                                    toggleLikeState={toggleLikeState}
+                                    articleLikeState={articleLikeState}
+                                />
                             </>
                         }
                     />
@@ -59,7 +83,10 @@ export const Main = () => {
                         element={
                             <>
                                 <MainDarkSection />
-                                <ScienceCategoryPage />
+                                <ScienceCategoryPage
+                                    toggleLikeState={toggleLikeState}
+                                    articleLikeState={articleLikeState}
+                                />
                             </>
                         }
                     />
@@ -68,7 +95,10 @@ export const Main = () => {
                         element={
                             <>
                                 <MainDarkSection />
-                                <ArtCategoryPage />
+                                <ArtCategoryPage
+                                    toggleLikeState={toggleLikeState}
+                                    articleLikeState={articleLikeState}
+                                />
                             </>
                         }
                     />
@@ -78,10 +108,14 @@ export const Main = () => {
                         element={
                             <>
                                 <MainDarkSection />
-                                <ArticleItem />
+                                <ArticleItem
+                                    toggleLikeState={toggleLikeState}
+                                    articleLikeState={articleLikeState}
+                                />
                             </>
                         }
                     />
+                    <Route path="*" element={<NoMatch />} />
                 </Routes>
             </div>
         </>

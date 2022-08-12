@@ -5,12 +5,10 @@ import 'pages/Category/Category.scss'
 import ArticlesArray from 'utils/ArticlesArray'
 import { Grid } from '@mui/material'
 import ReactPaginate from 'react-paginate'
-
-import { FollowUs } from 'components/FollowUs/FollowUs'
 import 'components/FollowUs/FollowUs.scss'
 import { CategoryItem } from '../CategoryItem'
 
-export const ScienceCategoryPage = () => {
+export const ScienceCategoryPage = ({ toggleLikeState, articleLikeState }) => {
     const [page, setPage] = useState(0)
 
     const articlesPerPage = 6
@@ -58,6 +56,8 @@ export const ScienceCategoryPage = () => {
                                     text={text}
                                     date={date}
                                     author={author}
+                                    toggleLikeState={toggleLikeState}
+                                    isLiked={articleLikeState[id]}
                                 />
                             </Grid>
                         )

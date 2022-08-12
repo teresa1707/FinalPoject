@@ -19,6 +19,8 @@ export const CategoryItem = ({
     text,
     date,
     author,
+    toggleLikeState,
+    isLiked = false,
 }) => {
     return (
         <>
@@ -59,8 +61,19 @@ export const CategoryItem = ({
                                 <p>{text}</p>
                             </div>
                             <div className="list2-item-cat">
-                                <div className="rank-cat">
-                                    <FaHeart className="heart" />
+                                <div
+                                    className="rank-cat"
+                                    onClick={() => toggleLikeState(id)}
+                                >
+                                    {' '}
+                                    {isLiked ? (
+                                        <FaHeart
+                                            className="heart"
+                                            style={{ color: 'red' }}
+                                        />
+                                    ) : (
+                                        <FaHeart className="heart" />
+                                    )}
                                 </div>
                             </div>
                         </div>

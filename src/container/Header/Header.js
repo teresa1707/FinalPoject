@@ -2,15 +2,14 @@ import React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import IconButton from '@mui/material/IconButton'
 
-import { Container, TextField } from '@mui/material'
+import { Container } from '@mui/material'
 import './Header.scss'
 import { Menu } from 'components/Menu/Menu'
 
 import SearchInput from 'components/Menu/SearchInput'
 
-export const Header = () => {
+export const Header = ({ likedArticles }) => {
     return (
         <>
             <AppBar position="fixed" className="header-menu">
@@ -24,7 +23,9 @@ export const Header = () => {
                         >
                             LOGO
                         </Typography>
-                        <Menu />
+
+                        <Menu likedArticles={likedArticles} />
+
                         <SearchInput />
                     </Toolbar>
                 </Container>

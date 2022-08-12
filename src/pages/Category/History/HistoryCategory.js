@@ -8,7 +8,7 @@ import ReactPaginate from 'react-paginate'
 
 import { CategoryItem } from '../CategoryItem'
 
-export const HistoryCategoryPage = () => {
+export const HistoryCategoryPage = ({ toggleLikeState, articleLikeState }) => {
     const [page, setPage] = useState(0)
 
     const articlesPerPage = 6
@@ -56,6 +56,8 @@ export const HistoryCategoryPage = () => {
                                     text={text}
                                     date={date}
                                     author={author}
+                                    toggleLikeState={toggleLikeState}
+                                    isLiked={articleLikeState[id]}
                                 />
                             </Grid>
                         )
