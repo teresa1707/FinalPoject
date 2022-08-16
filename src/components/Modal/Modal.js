@@ -83,7 +83,7 @@ export const ModalWindow = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <Button onClick={handleOpen}>New User</Button>
+            <Button onClick={handleOpen}>Write us</Button>
         </>
     )
 }

@@ -100,7 +100,7 @@ export const MainArticlesItem = ({
                             className="rank-cat"
                             onClick={(event) => {
                                 toggleLikeState(id)
-                                addLikedArticles(id)
+                                addLikedArticles(id, isLiked)
                             }}
                         >
                             <span>

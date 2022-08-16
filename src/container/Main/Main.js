@@ -12,6 +12,8 @@ import { ArticleItem } from 'components/Article/ArticleItem'
 import { ArtCategoryPage } from 'pages/Category/Art/ArtCategoryPage'
 import { NoMatch } from 'pages/NoMatch/NoMatch'
 import { FavoritePage } from 'pages/FavoritePage/FavoritePage'
+import articles from 'utils/ArticlesArray'
+import { FavoritePageItem } from 'pages/FavoritePage/FavoritePageItem'
 
 export const Main = ({
     toggleLikeState,
@@ -19,6 +21,7 @@ export const Main = ({
     addLikedArticles,
     likedArticles,
 }) => {
+    let id = articles.map((article) => article.id)
     return (
         <>
             <div className="wrapper">
@@ -43,7 +46,12 @@ export const Main = ({
                         element={
                             <>
                                 <MainDarkSection />
-                                <FavoritePage />
+                                <FavoritePage
+                                    likedArticles={likedArticles}
+                                    toggleLikeState={toggleLikeState}
+                                    articleLikeState={articleLikeState}
+                                    addLikedArticles={addLikedArticles}
+                                />
                             </>
                         }
                     />

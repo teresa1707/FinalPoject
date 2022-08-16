@@ -37,11 +37,31 @@ export const MainColumnItems = () => {
                                 labore. Quo, velit et?
                             </p>
                         </div>
-                        <ModalWindow className="modalWindow" />
                     </Card>
                 </Grid>
 
-                <FollowUs />
+                <Grid item mb={4}>
+                    <Card>
+                        <div className="title2">Become our author</div>
+                        <div className="text2">
+                            <p>
+                                Fugiat possimus perferendis odio laudantium
+                                error vero maxime quasi architecto distinctio
+                                eaque aliquid ut excepturi ea eius, illum
+                                labore.{' '}
+                                <span
+                                    style={{
+                                        color: 'orangered',
+                                        fontWeight: 'bold',
+                                    }}
+                                >
+                                    Want to join us?
+                                </span>
+                            </p>
+                        </div>
+                        <ModalWindow className="modalWindow" />
+                    </Card>
+                </Grid>
             </Grid>
         </>
     )
