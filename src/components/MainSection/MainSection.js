@@ -11,6 +11,7 @@ export const MainSection = ({
     articleLikeState,
     addLikedArticles,
     likedArticles,
+    removeUnlikedArticle,
 }) => {
     return (
         <>
@@ -29,6 +30,7 @@ export const MainSection = ({
                             articleLikeState={articleLikeState}
                             addLikedArticles={addLikedArticles}
                             likedArticles={likedArticles}
+                            removeUnlikedArticle={removeUnlikedArticle}
                         />
                     </Grid>
                 </Grid>

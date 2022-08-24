@@ -11,6 +11,7 @@ export const ArticleItem = ({
     articlesObject = getArticlesObject(articles),
     toggleLikeState,
     articleLikeState,
+    addLikedArticles,
 }) => {
     let { id } = useParams()
     let category = articlesObject[id].category
@@ -71,8 +72,11 @@ export const ArticleItem = ({
                             ></div>
                             <div className="list2-item">
                                 <div
-                                    className="rank-cat"
-                                    onClick={() => toggleLikeState(id)}
+                                    className="rank"
+                                    onClick={(event) => {
+                                        toggleLikeState(id)
+                                        addLikedArticles(id, isLiked)
+                                    }}
                                 >
                                     <span>
                                         {isLiked ? (

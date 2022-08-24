@@ -5,10 +5,9 @@ import articles, { getArticlesObject } from 'utils/ArticlesArray'
 
 export const FavoritePageItem = ({
     article,
-    isLiked = false,
-    toggleLikeState,
-    addLikedArticles,
+    removeUnlikedArticle,
     id,
+    likedArticles,
 }) => {
     return (
         <>
@@ -51,25 +50,17 @@ export const FavoritePageItem = ({
                                 <div className="art-text">
                                     <p>{article.text}</p>
                                 </div>
-                                <div className="list2-item-cat">
-                                    <div
-                                        className="rank-cat"
-                                        onClick={(event) => {
-                                            toggleLikeState(id)
-                                            addLikedArticles(id, isLiked)
-                                        }}
-                                    >
-                                        {' '}
-                                        {isLiked ? (
-                                            <FaHeart
-                                                className="heart"
-                                                style={{
-                                                    color: 'red',
-                                                }}
-                                            />
-                                        ) : (
-                                            <FaHeart className="heart" />
-                                        )}
+                                <div
+                                    className="list2-item-cat"
+                                    onClick={() => removeUnlikedArticle(id)}
+                                >
+                                    <div className="rank-cat">
+                                        <FaHeart
+                                            className="heart"
+                                            style={{
+                                                color: 'red',
+                                            }}
+                                        />
                                     </div>
                                 </div>
                             </div>

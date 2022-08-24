@@ -82,6 +82,7 @@ body {
     border: none;
     color: #dfd7c6;
     font-size: 13px;
+    font-weight: bold;
 }
 .swiper-button:hover {
     background-color: transparent;

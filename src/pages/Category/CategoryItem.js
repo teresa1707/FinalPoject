@@ -21,6 +21,7 @@ export const CategoryItem = ({
     author,
     toggleLikeState,
     isLiked = false,
+    addLikedArticles,
 }) => {
     return (
         <>
@@ -63,7 +64,10 @@ export const CategoryItem = ({
                             <div className="list2-item-cat">
                                 <div
                                     className="rank-cat"
-                                    onClick={() => toggleLikeState(id)}
+                                    onClick={(event) => {
+                                        toggleLikeState(id)
+                                        addLikedArticles(id, isLiked)
+                                    }}
                                 >
                                     {' '}
                                     {isLiked ? (

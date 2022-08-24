@@ -13,13 +13,13 @@ import { ArtCategoryPage } from 'pages/Category/Art/ArtCategoryPage'
 import { NoMatch } from 'pages/NoMatch/NoMatch'
 import { FavoritePage } from 'pages/FavoritePage/FavoritePage'
 import articles from 'utils/ArticlesArray'
-import { FavoritePageItem } from 'pages/FavoritePage/FavoritePageItem'
 
 export const Main = ({
     toggleLikeState,
     articleLikeState,
     addLikedArticles,
     likedArticles,
+    removeUnlikedArticle,
 }) => {
     let id = articles.map((article) => article.id)
     return (
@@ -37,6 +37,7 @@ export const Main = ({
                                     articleLikeState={articleLikeState}
                                     addLikedArticles={addLikedArticles}
                                     likedArticles={likedArticles}
+                                    removeUnlikedArticle={removeUnlikedArticle}
                                 />
                             </>
                         }
@@ -48,9 +49,7 @@ export const Main = ({
                                 <MainDarkSection />
                                 <FavoritePage
                                     likedArticles={likedArticles}
-                                    toggleLikeState={toggleLikeState}
-                                    articleLikeState={articleLikeState}
-                                    addLikedArticles={addLikedArticles}
+                                    removeUnlikedArticle={removeUnlikedArticle}
                                 />
                             </>
                         }
@@ -80,8 +79,10 @@ export const Main = ({
                             <>
                                 <MainDarkSection />
                                 <HistoryCategoryPage
+                                    likedArticles={likedArticles}
                                     toggleLikeState={toggleLikeState}
                                     articleLikeState={articleLikeState}
+                                    addLikedArticles={addLikedArticles}
                                 />
                             </>
                         }
@@ -92,8 +93,10 @@ export const Main = ({
                             <>
                                 <MainDarkSection />
                                 <ScienceCategoryPage
+                                    likedArticles={likedArticles}
                                     toggleLikeState={toggleLikeState}
                                     articleLikeState={articleLikeState}
+                                    addLikedArticles={addLikedArticles}
                                 />
                             </>
                         }
@@ -104,8 +107,10 @@ export const Main = ({
                             <>
                                 <MainDarkSection />
                                 <ArtCategoryPage
+                                    likedArticles={likedArticles}
                                     toggleLikeState={toggleLikeState}
                                     articleLikeState={articleLikeState}
+                                    addLikedArticles={addLikedArticles}
                                 />
                             </>
                         }
@@ -119,6 +124,7 @@ export const Main = ({
                                 <ArticleItem
                                     toggleLikeState={toggleLikeState}
                                     articleLikeState={articleLikeState}
+                                    addLikedArticles={addLikedArticles}
                                 />
                             </>
                         }

@@ -2,12 +2,21 @@ import React, { useState } from 'react'
 import { Header } from '../Header/Header'
 import { Main } from '../Main/Main'
 import { Footer } from '../Footer/Footer'
-
+import { omit } from 'lodash'
 import CssBaseline from '@mui/material/CssBaseline'
+import { FaHeart } from 'react-icons/fa'
 
 export const App = () => {
     const [articleLikeState, setArticleLikeState] = useState({})
     const [likedArticles, setLikedArticles] = useState({})
+
+    const removeUnlikedArticle = (id, isLiked) => {
+        setLikedArticles((prevState) => omit(prevState, id))
+        setArticleLikeState((prevState) => ({
+            ...prevState,
+            [id]: !prevState[id],
+        }))
+    }
 
     const toggleLikeState = (id) =>
         setArticleLikeState((prevState) => ({
@@ -24,8 +33,10 @@ export const App = () => {
                   }
                 : {
                       ...prevState,
-                      [id]: (prevState[id] || 0) - 1 && delete prevState[id],
+                      [id]: (prevState[id] || 0) - 1,
                   }
+                ? omit(prevState, id)
+                : { ...prevState }
         )
     }
 
@@ -33,13 +44,17 @@ export const App = () => {
         <>
             <CssBaseline />
 
-            <Header likedArticles={likedArticles} />
+            <Header
+                likedArticles={likedArticles}
+                articleLikeState={articleLikeState}
+            />
 
             <Main
                 toggleLikeState={toggleLikeState}
                 articleLikeState={articleLikeState}
                 addLikedArticles={addLikedArticles}
                 likedArticles={likedArticles}
+                removeUnlikedArticle={removeUnlikedArticle}
             />
             <Footer />
         </>

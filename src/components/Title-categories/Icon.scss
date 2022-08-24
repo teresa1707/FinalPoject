@@ -34,9 +34,14 @@
 .list1-item .rank span {
     position: relative;
     top: 3px;
-    left: 9px;
+    left: 7px;
 }
 
 .list1-item:hover {
     background-color: #d9cdae;
+}
+
+.plus {
+    position: relative;
+    top: -30px;
 }

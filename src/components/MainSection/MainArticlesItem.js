@@ -21,6 +21,8 @@ export const MainArticlesItem = ({
     toggleLikeState,
     isLiked = false,
     addLikedArticles,
+    removeUnlikedArticle,
+    likedArticles,
 }) => {
     return (
         <>
@@ -42,9 +44,9 @@ export const MainArticlesItem = ({
                                 className="plus"
                                 to={`/${category}/${id}`}
                                 style={{
-                                    padding: 5,
                                     fontSize: 20,
                                     textDecoration: 'none',
+                                    color: 'orangered',
                                 }}
                             >
                                 find out more...
@@ -103,16 +105,14 @@ export const MainArticlesItem = ({
                                 addLikedArticles(id, isLiked)
                             }}
                         >
-                            <span>
-                                {isLiked ? (
-                                    <FaHeart
-                                        className="heart"
-                                        style={{ color: 'red' }}
-                                    />
-                                ) : (
-                                    <FaHeart className="heart" />
-                                )}
-                            </span>
+                            {isLiked ? (
+                                <FaHeart
+                                    className="heart"
+                                    style={{ color: 'red' }}
+                                />
+                            ) : (
+                                <FaHeart className="heart" />
+                            )}
                         </div>
                     </div>
                 </Grid>

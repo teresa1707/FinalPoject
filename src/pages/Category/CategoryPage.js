@@ -10,7 +10,12 @@ import { FollowUs } from 'components/FollowUs/FollowUs'
 import 'components/FollowUs/FollowUs.scss'
 import articles from 'utils/ArticlesArray'
 
-const CategoryPage = () => {
+const CategoryPage = ({
+    likedArticles,
+    toggleLikeState,
+    isLiked = false,
+    addLikedArticles,
+}) => {
     const [page, setPage] = useState(0)
 
     // const filterArt = articles

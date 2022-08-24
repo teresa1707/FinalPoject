@@ -11,6 +11,7 @@ export const MainArticlesSection = ({
     articleLikeState,
     addLikedArticles,
     likedArticles,
+    removeUnlikedArticle,
 }) => {
     return (
         <>
@@ -47,6 +48,7 @@ export const MainArticlesSection = ({
                                 isLiked={articleLikeState[id]}
                                 addLikedArticles={addLikedArticles}
                                 likedArticles={likedArticles}
+                                removeUnlikedArticle={removeUnlikedArticle}
                             />
                         </div>
                     )

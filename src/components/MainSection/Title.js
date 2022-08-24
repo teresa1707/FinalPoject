@@ -2,7 +2,7 @@ import React from 'react'
 
 import './TitleCutPaper.scss'
 
-const Text = ({ value }) => (
+const Text = () => (
     <div className="text1">
         {value.split('').map((char, id) => (
             <div className="letter" key={id}>
@@ -14,8 +14,9 @@ const Text = ({ value }) => (
     </div>
 )
 
+let value = 'Title'
 export const Title = () => (
     <div className="app">
-        <Text value="put your text here" />
+        <Text value={value} />
     </div>
 )

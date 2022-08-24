@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom'
 
 import './Menu.scss'
 
-export const Menu = ({ likedArticles }) => {
+export const Menu = ({ likedArticles, articleLikeState }) => {
     return (
         <>
             <div className="menu">
                 <nav className="navigation">
                     <ul className="ul">
                         <li className="li">
-                            <Favorite likedArticles={likedArticles} />
+                            <Favorite
+                                likedArticles={likedArticles}
+                                articleLikeState={articleLikeState}
+                            />
                         </li>
 
                         <li className="li">

@@ -9,7 +9,7 @@ import { Menu } from 'components/Menu/Menu'
 
 import SearchInput from 'components/Menu/SearchInput'
 
-export const Header = ({ likedArticles }) => {
+export const Header = ({ likedArticles, articleLikeState }) => {
     return (
         <>
             <AppBar position="fixed" className="header-menu">
@@ -24,7 +24,10 @@ export const Header = ({ likedArticles }) => {
                             LOGO
                         </Typography>
 
-                        <Menu likedArticles={likedArticles} />
+                        <Menu
+                            likedArticles={likedArticles}
+                            articleLikeState={articleLikeState}
+                        />
 
                         <SearchInput />
                     </Toolbar>
