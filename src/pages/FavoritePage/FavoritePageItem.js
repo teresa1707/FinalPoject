@@ -1,13 +1,12 @@
 import { Grid } from '@mui/material'
 import React from 'react'
 import { FaHeart } from 'react-icons/fa'
-import articles, { getArticlesObject } from 'utils/ArticlesArray'
 
 export const FavoritePageItem = ({
     article,
     removeUnlikedArticle,
     id,
-    likedArticles,
+    // likedArticles,
 }) => {
     return (
         <>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Modal.scss'
 import '../../container/Slider/swiper.css'
+import PhotoCamera from '@mui/icons-material/PhotoCamera'
 import {
     Modal,
     Card,
@@ -11,7 +12,10 @@ import {
     TextareaAutosize,
     TextField,
     Button,
+    Stack,
 } from '@mui/material'
+import { SlidingButton } from 'components/MyButton/SlidingButton'
+import { MyButton } from 'components/MyButton/MyButton'
 
 export const ModalWindow = () => {
     const [open, setOpen] = useState(false)
@@ -24,6 +28,9 @@ export const ModalWindow = () => {
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 
+    let text = 'OK'
+    let text1 = 'Cancel'
+    let text2 = 'Write us'
     return (
         <>
             <Modal
@@ -108,47 +115,53 @@ export const ModalWindow = () => {
                         />
                         <TextareaAutosize
                             className="input-style"
-                            minRows={6}
+                            minRows={3}
                             placeholder="Wright here"
                         />
+                        <Stack direction="row" alignItems="center" spacing={2}>
+                            <Button
+                                style={{
+                                    width: '30%',
+                                    color: 'brown',
+                                    backgroundColor: '#f5f5f2',
+                                    margin: 20,
+                                    fontWeight: 'bold',
+                                }}
+                                component="label"
+                            >
+                                Upload file
+                                <input
+                                    hidden
+                                    accept="image/*"
+                                    multiple
+                                    type="file"
+                                />
+                            </Button>
+                            <Button
+                                style={{
+                                    fontSize: 13,
+                                    color: 'brown',
+                                    fontWeight: 'bold',
+                                    backgroundColor: '#f5f5f2',
+                                }}
+                                aria-label="upload picture"
+                                component="label"
+                            >
+                                UPLOAD
+                                <input hidden accept="image/*" type="file" />
+                                <PhotoCamera />
+                            </Button>
+                        </Stack>
                         <div className="buttons">
-                            <Button
-                                onClick={handleClose}
-                                style={{
-                                    width: '30%',
-                                    color: 'brown',
-                                    backgroundColor: '#f5f5f2',
-                                    margin: 20,
-                                    fontWeight: 'bold',
-                                }}
-                            >
-                                Send
-                            </Button>
-                            <Button
-                                appearance="subtle"
-                                onClick={handleClose}
-                                style={{
-                                    width: '30%',
-                                    color: 'brown',
-                                    backgroundColor: '#f5f5f2',
-                                    margin: 20,
-                                    fontWeight: 'bold',
-                                }}
-                            >
-                                Cancel
-                            </Button>
+                            <MyButton text={text} handleClose={handleClose} />
+                            <MyButton text={text1} handleClose={handleClose} />
                         </div>
                     </FormControl>
                 </Card>
             </Modal>
-
-            <button
-                className="modal-button swiper-button"
-                style={{ color: 'brown' }}
-                onClick={handleOpen}
-            >
-                Wright us
-            </button>
+            <div className="modal-button">
+                <SlidingButton text={text2} handleOpen={handleOpen} />
+            </div>
         </>
     )
 }

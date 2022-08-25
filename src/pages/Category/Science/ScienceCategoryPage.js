@@ -1,5 +1,5 @@
 import { React, useState } from 'react'
-import 'styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import 'styles/grid.scss'
 import 'pages/Category/Category.scss'
 import ArticlesArray from 'utils/ArticlesArray'

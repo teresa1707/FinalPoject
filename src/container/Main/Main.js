@@ -1,5 +1,5 @@
 import React from 'react'
-import 'styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import { MainDarkSection } from 'components/MainDarkSection/MainDarkSection'
 import { MainSection } from 'components/MainSection/MainSection'
 import { Route, Routes } from 'react-router-dom'
@@ -13,6 +13,7 @@ import { ArtCategoryPage } from 'pages/Category/Art/ArtCategoryPage'
 import { NoMatch } from 'pages/NoMatch/NoMatch'
 import { FavoritePage } from 'pages/FavoritePage/FavoritePage'
 import articles from 'utils/ArticlesArray'
+import { ScrollUp } from 'components/ScrollUp/ScrollUp'
 
 export const Main = ({
     toggleLikeState,
@@ -131,6 +132,7 @@ export const Main = ({
                     />
                     <Route path="*" element={<NoMatch />} />
                 </Routes>
+                <ScrollUp height={200} />
             </div>
         </>
     )

@@ -3,8 +3,9 @@ import { FollowUs } from 'components/FollowUs/FollowUs'
 import React from 'react'
 import './AboutPage.scss'
 import '../Category/Category.scss'
-import '../../styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import { SlidingButton } from 'components/MyButton/SlidingButton'
+import { Title } from 'components/Titles/Title'
 
 const PostsData = [
     {
@@ -62,11 +63,12 @@ export class AboutPage extends React.Component {
     }
 
     render() {
+        let titleText = 'ABOUT US'
         return (
             <Container className="container">
                 <Grid container mt={'6px'}>
                     <Grid item sm={12} md={3} className="app-header">
-                        <Title />
+                        <Title titleText={titleText} />
                         <FollowUs />
                     </Grid>
 
@@ -91,22 +93,6 @@ export class AboutPage extends React.Component {
     }
 }
 
-class Title extends React.Component {
-    render() {
-        return (
-            <Card
-                style={{ padding: '10px', margin: '20px 0', borderRadius: 8 }}
-            >
-                <div className="app-title">
-                    <div className="app-title-content">
-                        <h1>ABOUT US</h1>
-                    </div>
-                </div>
-            </Card>
-        )
-    }
-}
-
 class CardHeader extends React.Component {
     render() {
         const { image, category } = this.props
@@ -122,6 +108,7 @@ class CardHeader extends React.Component {
 
 class CardBody extends React.Component {
     render() {
+        let text = 'FIND OUT MORE'
         return (
             <div className="card-body">
                 <p className="date">March 20 2015</p>
@@ -130,7 +117,7 @@ class CardBody extends React.Component {
 
                 <p className="body-content">{this.props.text}</p>
 
-                <SlidingButton />
+                <SlidingButton text={text} />
             </div>
         )
     }

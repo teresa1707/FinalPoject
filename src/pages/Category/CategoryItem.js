@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid } from '@mui/material'
 
 import 'pages/Category/Category.scss'
-import 'styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import 'styles/grid.scss'
 import 'components/MainSection/Images.scss'
 import 'components/Title-categories/Icon.scss'

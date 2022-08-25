@@ -1,10 +1,10 @@
 import React from 'react'
-import 'styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import Grid from '@mui/material/Grid'
 import { Container } from '@mui/system'
 import { MainColumnItems } from './MainColumnItems'
 import { MainArticlesSection } from './MainArticlesSection'
-import { Title } from './Title'
+import { Title } from 'components/Titles/Title'
 
 export const MainSection = ({
     toggleLikeState,
@@ -13,12 +13,18 @@ export const MainSection = ({
     likedArticles,
     removeUnlikedArticle,
 }) => {
+    let titleText = 'The title of the Blog'
     return (
         <>
             <Container>
                 <Grid container>
-                    <Grid item xs={12} className="title">
-                        <Title />
+                    <Grid
+                        item
+                        xs={12}
+                        className="title"
+                        style={{ color: 'green' }}
+                    >
+                        <Title titleText={titleText} />
                     </Grid>
                     <Grid item xs={12} md={3}>
                         <MainColumnItems />

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Grid } from '@mui/material'
 import { Container } from '@mui/system'
-import '../../styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import 'container/Footer/Footer.scss'
 import { SocialMedia } from 'components/SocialMedia/SocialMedia'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid } from '@mui/material'
-import 'styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import 'styles/grid.scss'
 import './Images.scss'
 import '../../components/Title-categories/Icon.scss'
@@ -21,8 +21,6 @@ export const MainArticlesItem = ({
     toggleLikeState,
     isLiked = false,
     addLikedArticles,
-    removeUnlikedArticle,
-    likedArticles,
 }) => {
     return (
         <>

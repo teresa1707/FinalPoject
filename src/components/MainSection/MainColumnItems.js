@@ -1,6 +1,6 @@
 import React from 'react'
 import Grid from '@mui/material/Grid'
-import 'styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import 'styles/grid.scss'
 import { ModalWindow } from 'components/Modal/Modal'
 

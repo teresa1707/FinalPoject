@@ -1,11 +1,11 @@
 import { React, useState } from 'react'
-import 'styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import 'styles/grid.scss'
 import 'pages/Category/Category.scss'
 import ArticlesArray from 'utils/ArticlesArray'
 import { Grid } from '@mui/material'
 import ReactPaginate from 'react-paginate'
-import { FollowUs } from 'components/FollowUs/FollowUs'
+
 import { CategoryItem } from '../CategoryItem'
 
 export const ArtCategoryPage = ({

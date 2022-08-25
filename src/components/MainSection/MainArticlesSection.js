@@ -1,6 +1,6 @@
 import React from 'react'
 
-import 'styles/Main.scss'
+import 'components/MainSection/Main.scss'
 import 'styles/grid.scss'
 import { MainArticlesItem } from './MainArticlesItem'
 
