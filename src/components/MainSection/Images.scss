@@ -1,8 +1,10 @@
 // main section item image
 .plus {
-    font-weight: lighter;
-    font-size: 18px;
-    color: #dfd7c6;
+    font-weight: bold;
+    font-size: 13px;
+    // color: #dfd7c6;
+
+    margin: 40px 0 0 20px;
 }
 #img-1 {
     position: relative;
@@ -20,29 +22,19 @@
 
 .img-block {
     position: absolute;
-    padding: 10px;
+
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
+
     bottom: -100px;
-    z-index: 2;
-}
-.img-block1 {
-    position: absolute;
-    padding: 20px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    font-size: 40px;
-    font-weight: bold;
-    top: -100px;
     z-index: 2;
 }
 
 @keyframes slide-up {
     from {
-        bottom: -100px;
+        bottom: -50px;
     }
     to {
-        bottom: 0px;
+        bottom: -20px;
     }
 }
 
@@ -62,16 +54,13 @@
     }
 }
 
-#img-1:hover > .img-block1 {
-    animation: slide-up1 1.5s forwards;
-}
 @keyframes zoom-blur {
     from {
         transform: scale(1);
-        filter: blur(0px);
+        // filter: blur(0px);
     }
     to {
         transform: scale(1.2);
-        filter: blur(5px);
+        // filter: blur(5px);
     }
 }

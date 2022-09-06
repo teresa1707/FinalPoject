@@ -1,0 +1,23 @@
+.react-calendar button {
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+
+.react-calendar__tile--active {
+    background: #91979e !important;
+    border-radius: 8px !important;
+    color: white;
+}
+.react-calendar button:enabled:hover {
+    cursor: pointer;
+    border-radius: 8px;
+}
+.react-calendar__navigation button {
+    color: grey;
+    font-weight: bold;
+}
+.react-calendar__tile--now {
+    background: #ffff76;
+    border-radius: 8px !important;
+}

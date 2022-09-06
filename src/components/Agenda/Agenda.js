@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
-// import './App.css'
+import './Agenda.scss'
 
 export function Agenda() {
     const [date, setDate] = useState([
@@ -13,9 +13,9 @@ export function Agenda() {
 
     return (
         <div className="app">
-            <h1 className="text-center">React Calendar with Range</h1>
+            <h1 className="text-center">React Calendar</h1>
             <div className="calendar-container">
-                // Calendar component
+                // as example
                 <Calendar
                     onChange={setDate}
                     value={date}

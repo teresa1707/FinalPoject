@@ -7,6 +7,8 @@ import 'components/MainSection/Main.scss'
 import { SlidingButton } from 'components/MyButton/SlidingButton'
 import { Title } from 'components/Titles/Title'
 
+import { Agenda } from 'components/Agenda/Agenda'
+
 const PostsData = [
     {
         category: 'OUR STUFF ',
@@ -30,7 +32,7 @@ const PostsData = [
         category: 'NEWS',
         title: 'CNN Acquire BEME',
         text: "CNN purchased Casey Neistat's Beme app for $25million.",
-        image: 'images/weAreHiring (2).jpg',
+        image: 'images/weAreHiring (1).jpg',
     },
     {
         category: 'JOIN US',
@@ -69,7 +71,18 @@ export class AboutPage extends React.Component {
                 <Grid container mt={'6px'}>
                     <Grid item sm={12} md={3} className="app-header">
                         <Title titleText={titleText} />
-                        <FollowUs />
+                        <Card
+                            style={{
+                                padding: '10px',
+                                borderRadius: 8,
+                            }}
+                        >
+                            <div className="app-title">
+                                <h1 className="mainTitle">
+                                    {/* <Agenda /> */}
+                                </h1>
+                            </div>
+                        </Card>
                     </Grid>
 
                     <Grid

@@ -17,16 +17,12 @@ import {
 import { SlidingButton } from 'components/MyButton/SlidingButton'
 import { MyButton } from 'components/MyButton/MyButton'
 
-export const ModalWindow = () => {
-    const [open, setOpen] = useState(false)
+export const ModalWindow = ({ handleOpen, handleClose, open }) => {
     const [category, setCategory] = useState('')
 
     const handleChange = (event) => {
         setCategory(event.target.value)
     }
-
-    const handleOpen = () => setOpen(true)
-    const handleClose = () => setOpen(false)
 
     let text = 'OK'
     let text1 = 'Cancel'

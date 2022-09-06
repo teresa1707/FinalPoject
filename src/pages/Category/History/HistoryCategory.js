@@ -51,7 +51,7 @@ export const HistoryCategoryPage = ({
                             date,
                             author,
                         }) => (
-                            <Grid item xs={12} md={4} key={id}>
+                            <Grid item xs={12} sm={6} key={id}>
                                 <CategoryItem
                                     id={id}
                                     link={link}

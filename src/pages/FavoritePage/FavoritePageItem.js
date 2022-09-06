@@ -1,16 +1,17 @@
 import { Grid } from '@mui/material'
 import React from 'react'
 import { FaHeart } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export const FavoritePageItem = ({
     article,
     removeUnlikedArticle,
     id,
-    // likedArticles,
+    category,
 }) => {
     return (
         <>
-            <Grid item xs={12} md={4} key={id}>
+            <Grid item xs={12} md={6} key={id}>
                 <Grid className="art-grid ">
                     <div className="art-item">
                         <div className="art-item-box">
@@ -41,7 +42,15 @@ export const FavoritePageItem = ({
 
                                     <div className="name-cat">
                                         <h2 className="title3-card gridItem">
-                                            {article.title}
+                                            <Link
+                                                to={`/${category}/${id}`}
+                                                style={{
+                                                    textDecoration: 'none',
+                                                    color: '#a35410',
+                                                }}
+                                            >
+                                                {article.title}
+                                            </Link>
                                         </h2>
                                     </div>
                                 </div>

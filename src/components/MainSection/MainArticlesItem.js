@@ -32,11 +32,6 @@ export const MainArticlesItem = ({
                     className="title3-photo title3-container"
                 >
                     <div id="img-1">
-                        <div className="img-block1">
-                            <p className="plus">
-                                {date}-{author}-{id}
-                            </p>
-                        </div>
                         <div className="img-block">
                             <Link
                                 className="plus"
@@ -51,6 +46,11 @@ export const MainArticlesItem = ({
                             </Link>
                         </div>
                         <img id="image" src={image} alt="sample41" />
+                    </div>
+                    <div>
+                        <p className="plus">
+                            {date}-{author}-{id}
+                        </p>
                     </div>
                 </Grid>
 
@@ -79,22 +79,14 @@ export const MainArticlesItem = ({
                                         textDecoration: 'none',
                                     }}
                                 >
-                                    <h2
-                                        className="title3-card "
-                                        style={{
-                                            paddingLeft: '20px',
-                                            lineHeight: '17px',
-                                        }}
-                                    >
-                                        {title}
-                                    </h2>
+                                    <h2 className="title3-card ">{title}</h2>
                                 </Link>
                             </div>
                         </div>
                     </div>{' '}
                     <div className="text">
                         <p>{text}</p>
-                    </div>
+                    </div>{' '}
                     <div className="list2-item">
                         <div
                             className="rank-cat"

@@ -16,3 +16,39 @@
 .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
     color: wheat !important;
 }
+.favorite {
+    margin-right: 40px;
+    margin-top: -25px;
+}
+.logo {
+    padding-bottom: 30px;
+}
+
+@media (max-width: 1050px) {
+    .search {
+        margin-bottom: -30px;
+        margin-right: 100px;
+    }
+    .favorite {
+        margin-right: 40px;
+        margin-top: 0;
+    }
+    .logo {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search {
+        display: none;
+    }
+    .favorite {
+        margin-right: 140px;
+        margin-top: 0;
+    }
+}
+@media (max-width: 360px) {
+    .favorite {
+        display: none;
+    }
+}

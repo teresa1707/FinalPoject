@@ -37,16 +37,7 @@ export default function Slider() {
                     className="parallax-bg"
                     data-swiper-parallax="-23%"
                 ></div>
-                {/* <figure className="snip">
-                    <img src="/image/history1.jpg" alt="sample41" />
-                    <figcaption>
-                        <h2 className="title3">title</h2>
-                        <h2>""""</h2>
-
-                        <p>read more...</p>
-                    </figcaption>
-                </figure> */}
-
+                s
                 <SwiperSlide>
                     <Container>
                         {/* <div className="title" data-swiper-parallax="-300">title 1</div> */}
@@ -89,14 +80,13 @@ export default function Slider() {
                                 >
                                     <img
                                         src="images/history11.jpg"
-                                        alt=""
-                                    ></img>
+                                        alt="text"
+                                    />
                                 </Grid>
                             </Grid>
                         </div>
                     </Container>
                 </SwiperSlide>
-
                 <SwiperSlide>
                     <Container>
                         {/* <div className="title" data-swiper-parallax="-300">title 1</div> */}
@@ -132,8 +122,8 @@ export default function Slider() {
                                 <Grid item xs={12} md={6} className="grid-item">
                                     <img
                                         src="images/science11.jpg"
-                                        alt=""
-                                    ></img>
+                                        alt="text"
+                                    />
                                 </Grid>
                             </Grid>
                         </div>
@@ -174,7 +164,7 @@ export default function Slider() {
                                     </Button>
                                 </Grid>
                                 <Grid item xs={12} md={6} className="grid-item">
-                                    <img src="images/art11.jpg" alt=""></img>
+                                    <img src="images/art11.jpg" alt="text" />
                                 </Grid>
                             </Grid>
                         </div>

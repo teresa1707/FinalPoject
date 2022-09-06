@@ -21,6 +21,9 @@ export const Main = ({
     addLikedArticles,
     likedArticles,
     removeUnlikedArticle,
+    handleOpen,
+    handleClose,
+    open,
 }) => {
     let id = articles.map((article) => article.id)
     return (
@@ -39,6 +42,9 @@ export const Main = ({
                                     addLikedArticles={addLikedArticles}
                                     likedArticles={likedArticles}
                                     removeUnlikedArticle={removeUnlikedArticle}
+                                    handleOpen={handleOpen}
+                                    handleClose={handleClose}
+                                    open={open}
                                 />
                             </>
                         }
@@ -69,7 +75,10 @@ export const Main = ({
                         element={
                             <>
                                 <MainDarkSection />
-                                <ContactPage />
+                                <ContactPage
+                                    handleOpen={handleOpen}
+                                    handleClose={handleClose}
+                                />
                             </>
                         }
                     />
@@ -129,6 +138,10 @@ export const Main = ({
                                 />
                             </>
                         }
+                    />
+                    <Route
+                        path="/categoryMobile"
+                        element={<MainDarkSection />}
                     />
                     <Route path="*" element={<NoMatch />} />
                 </Routes>

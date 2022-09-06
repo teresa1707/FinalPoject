@@ -4,13 +4,16 @@ import { Main } from '../Main/Main'
 import { Footer } from '../Footer/Footer'
 import { omit } from 'lodash'
 import CssBaseline from '@mui/material/CssBaseline'
-import { FaHeart } from 'react-icons/fa'
 
 export const App = () => {
     const [articleLikeState, setArticleLikeState] = useState({})
     const [likedArticles, setLikedArticles] = useState({})
+    const [open, setOpen] = useState(false)
 
-    const removeUnlikedArticle = (id, isLiked) => {
+    const handleOpen = () => setOpen(true)
+    const handleClose = () => setOpen(false)
+
+    const removeUnlikedArticle = (id) => {
         setLikedArticles((prevState) => omit(prevState, id))
         setArticleLikeState((prevState) => ({
             ...prevState,
@@ -50,11 +53,14 @@ export const App = () => {
             />
 
             <Main
+                handleOpen={handleOpen}
+                handleClose={handleClose}
                 toggleLikeState={toggleLikeState}
                 articleLikeState={articleLikeState}
                 addLikedArticles={addLikedArticles}
                 likedArticles={likedArticles}
                 removeUnlikedArticle={removeUnlikedArticle}
+                open={open}
             />
             <Footer />
         </>

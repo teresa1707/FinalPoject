@@ -5,12 +5,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.list-item {
+.list-item,
+.list-item-active {
     position: relative;
     display: flex;
     align-items: center;
     margin: 20px 0;
     cursor: pointer;
+    top: 0;
+    left: 0;
 }
 
 .list-item::before {
@@ -21,7 +24,7 @@
     width: 45px;
     height: 45px;
     background: #dcdad3;
-    // background: #806d3c;
+
     border-radius: 22.5px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25),
         inset 1px 1px 1px rgba(255, 255, 255, 0.5),
@@ -35,6 +38,7 @@
 
 .list-item .rank {
     position: relative;
+    left: 4px;
     min-width: 50px;
     height: 50px;
     display: flex;
@@ -48,8 +52,7 @@
     content: '';
     position: absolute;
     top: 2px;
-    left: 2px;
-
+    left: 0px;
     width: 40px;
     height: 40px;
     background: rgb(67, 48, 41);

@@ -8,8 +8,10 @@ import './Header.scss'
 import { Menu } from 'components/Menu/Menu'
 
 import SearchInput from 'components/Menu/SearchInput'
+import { Favorite } from 'components/Favorite/Favorite'
+import { Link } from 'react-router-dom'
 
-export const Header = ({ likedArticles, articleLikeState }) => {
+export const Header = ({ likedArticles }) => {
     return (
         <>
             <AppBar position="fixed" className="header-menu">
@@ -19,17 +21,21 @@ export const Header = ({ likedArticles, articleLikeState }) => {
                             variant="h6"
                             component="div"
                             sx={{ flexGrow: 1 }}
-                            pb={4.5}
+                            className="logo"
                         >
                             LOGO
                         </Typography>
-
-                        <Menu
-                            likedArticles={likedArticles}
-                            articleLikeState={articleLikeState}
-                        />
-
-                        <SearchInput />
+                        <Menu likedArticles={likedArticles} />{' '}
+                        <Link
+                            to={`/favorite`}
+                            style={{ textDecoration: 'none' }}
+                            className="favorite"
+                        >
+                            <Favorite likedArticles={likedArticles} />
+                        </Link>
+                        <div className="search">
+                            <SearchInput />
+                        </div>
                     </Toolbar>
                 </Container>
             </AppBar>

@@ -88,8 +88,9 @@ Card {
 .title3-card {
     font-size: 16px;
     margin-left: 30px;
-    padding-right: 15px;
+    padding: 0 20px 0 15px;
     color: #806d3c;
+    line-height: 17px;
 }
 .inline {
     display: flex;
@@ -161,5 +162,29 @@ Link {
 @media (max-width: 767px) {
     .col-style {
         margin-left: 0;
+    }
+}
+@media (max-width: 300px) {
+    .card {
+        padding: 0px;
+        width: 90%;
+    }
+    .text,
+    .text2,
+    .text-section {
+        padding: 15px 5px;
+        font-size: 14px;
+    }
+    .inline {
+        padding: 0px 5px;
+    }
+    .list1-item {
+    }
+    .title3-card {
+        font-size: 12px;
+        margin-left: 5px;
+        padding: 0 5px 0 5px;
+        color: #806d3c;
+        line-height: 13px;
     }
 }

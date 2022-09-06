@@ -3,16 +3,14 @@ import Grid from '@mui/material/Grid'
 import 'components/MainSection/Main.scss'
 import 'styles/grid.scss'
 import { ModalWindow } from 'components/Modal/Modal'
-
-import { FollowUs } from 'components/FollowUs/FollowUs'
 import { Card } from '@mui/material'
 
-export const MainColumnItems = () => {
+export const MainColumnItems = ({ handleOpen, handleClose, open }) => {
     return (
         <>
             <Grid container className="flex-col">
                 <Grid item mb={4}>
-                    <Card>
+                    <Card className="card">
                         <div className="title2">inspiration</div>
                         <div className="text2 italic">
                             <p>
@@ -27,7 +25,7 @@ export const MainColumnItems = () => {
                     </Card>
                 </Grid>
                 <Grid item mb={4}>
-                    <Card>
+                    <Card className="card">
                         <div className="title2">Our mission</div>
                         <div className="text2">
                             <p>
@@ -41,7 +39,7 @@ export const MainColumnItems = () => {
                 </Grid>
 
                 <Grid item mb={4}>
-                    <Card>
+                    <Card className="card">
                         <div className="title2">Become our author</div>
                         <div className="text2">
                             <p>
@@ -59,7 +57,12 @@ export const MainColumnItems = () => {
                                 </span>
                             </p>
                         </div>
-                        <ModalWindow className="modalWindow" />
+                        <ModalWindow
+                            className="modalWindow"
+                            handleOpen={handleOpen}
+                            handleClose={handleClose}
+                            open={open}
+                        />
                     </Card>
                 </Grid>
             </Grid>

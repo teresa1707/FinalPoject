@@ -12,6 +12,9 @@ export const MainSection = ({
     addLikedArticles,
     likedArticles,
     removeUnlikedArticle,
+    handleOpen,
+    handleClose,
+    open,
 }) => {
     let titleText = 'The title of the Blog'
     return (
@@ -27,7 +30,11 @@ export const MainSection = ({
                         <Title titleText={titleText} />
                     </Grid>
                     <Grid item xs={12} md={3}>
-                        <MainColumnItems />
+                        <MainColumnItems
+                            handleOpen={handleOpen}
+                            handleClose={handleClose}
+                            open={open}
+                        />
                     </Grid>
 
                     <Grid item xs={12} md={9}>

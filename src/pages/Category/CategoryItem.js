@@ -25,7 +25,7 @@ export const CategoryItem = ({
 }) => {
     return (
         <>
-            <Grid className="art-grid ">
+            <div className="art-grid ">
                 <div className="art-item">
                     <div className="art-item-box">
                         <div className="art-img-wrap">
@@ -83,7 +83,7 @@ export const CategoryItem = ({
                         </div>
                     </div>
                 </div>
-            </Grid>
+            </div>
         </>
     )
 }

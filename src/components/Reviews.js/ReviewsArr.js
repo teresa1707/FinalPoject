@@ -1,4 +1,4 @@
-const likedArticlesArray = []
+export const ReviewsArr = []
 
 export const getArticlesObject = (array) =>
     array.reduce(
@@ -9,4 +9,4 @@ export const getArticlesObject = (array) =>
         {}
     )
 
-export default articles
+export default ReviewsArr

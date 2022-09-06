@@ -1,13 +1,9 @@
 .list3-item {
     position: relative;
-
     display: flex;
     align-items: center;
-    margin: 20px 0;
     cursor: pointer;
-    top: -30px;
-    right: 100px;
-    width: 100px;
+    width: 80px;
     min-height: 50px;
     background: #dcdad3;
     border-radius: 22.5px;
@@ -18,14 +14,16 @@
 
 .list3-item .rank-cat {
     position: relative;
-    left: 20px;
+    left: 17px;
     top: 2px;
 }
 .list3-item .rank-cat span {
-    padding: 0 20px;
+    padding: 0 12px;
+    position: relative;
+    top: -1px;
     color: red;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .list3-item:hover {
