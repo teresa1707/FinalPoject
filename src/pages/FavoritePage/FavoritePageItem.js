@@ -20,26 +20,24 @@ export const FavoritePageItem = ({
                                     alt={article.title}
                                     className="art-img"
                                     src={article.image}
-                                />
+                                />{' '}
                             </div>
-
                             <div className="art-category">
-                                <div className="art-meta">
-                                    {article.author}
-                                    <span className="art-separator">//</span>
-                                    {article.date}
-                                </div>
-
-                                <div className="list1-item-cat">
+                                <div
+                                    className="list1-item-cat"
+                                    style={{ marginTop: 40 }}
+                                >
                                     <div className="rank-cat">
-                                        <span className="catIcon">
+                                        <span
+                                            className="catIcon"
+                                            style={{ marginRight: 16 }}
+                                        >
                                             <img
                                                 src={article.categoryIcon}
                                                 alt=""
                                             />
                                         </span>
                                     </div>
-
                                     <div className="name-cat">
                                         <h2 className="title3-card gridItem">
                                             <Link
@@ -54,9 +52,13 @@ export const FavoritePageItem = ({
                                         </h2>
                                     </div>
                                 </div>
-
                                 <div className="art-text">
                                     <p>{article.text}</p>
+                                </div>{' '}
+                                <div style={{ fontSize: 10, color: 'brown' }}>
+                                    {article.author}
+                                    <span className="art-separator">//</span>
+                                    {article.date}
                                 </div>
                                 <div
                                     className="list2-item-cat"
@@ -71,7 +73,7 @@ export const FavoritePageItem = ({
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </div>{' '}
                         </div>
                     </div>
                 </Grid>

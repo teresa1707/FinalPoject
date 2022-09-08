@@ -64,3 +64,9 @@
         // filter: blur(5px);
     }
 }
+@media (max-width: 410px) {
+    img .art-img {
+        height: 150px;
+        width: 200px !important;
+    }
+}

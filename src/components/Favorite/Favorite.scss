@@ -29,3 +29,28 @@
 .list3-item:hover {
     background-color: #d9cdae;
 }
+@media (max-width: 360px) {
+    .list3-item {
+        position: relative;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 40px;
+        min-height: 40px;
+        background: transparent;
+    }
+    .list3-item .rank-cat {
+        position: relative;
+        left: 10px;
+        top: 10px;
+    }
+    .list3-item .rank-cat span {
+        position: relative;
+        top: -10px;
+        right: 7px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}

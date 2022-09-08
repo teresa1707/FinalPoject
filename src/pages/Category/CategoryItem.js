@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from '@mui/material'
+import { Card } from '@mui/material'
 
 import 'pages/Category/Category.scss'
 import 'components/MainSection/Main.scss'
@@ -31,15 +31,13 @@ export const CategoryItem = ({
                         <div className="art-img-wrap">
                             <img alt={title} className="art-img" src={image} />
                         </div>
-
-                        <div className="art-category">
-                            <div className="art-meta">
-                                {author}
-                                <span className="art-separator">//</span>
-                                {date}
-                            </div>
-
-                            <div className="list1-item-cat">
+                        <div className="art-meta">
+                            {author}
+                            <span className="art-separator">//</span>
+                            {date}
+                        </div>
+                        <Card className="art-category">
+                            <div className="list1-item-cat list-item-cat">
                                 <div className="rank-cat">
                                     <span className="catIcon">
                                         <img src={categoryIcon} alt="" />
@@ -80,7 +78,7 @@ export const CategoryItem = ({
                                     )}
                                 </div>
                             </div>
-                        </div>
+                        </Card>
                     </div>
                 </div>
             </div>

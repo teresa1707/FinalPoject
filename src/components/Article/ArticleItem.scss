@@ -134,6 +134,9 @@ img {
     }
 }
 @media (max-width: 330px) {
+    .list1-item-art {
+        left: -20px;
+    }
     .list1-item-art .title3-card {
         margin-top: 5px;
         font-size: 10px;
@@ -142,5 +145,36 @@ img {
     .art-text {
         font-size: 10px;
         padding: 15px 0;
+    }
+    .art-meta {
+        color: #8d99ae;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 1;
+        text-transform: uppercase;
+        margin: 0px 5px 5px 5px;
+    }
+    .artGrid {
+        background-color: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+            0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+
+        .artItemImg {
+            text-align: center;
+            position: relative;
+
+            z-index: 1;
+        }
+        .artImg {
+            border-radius: 10px;
+            width: 80%;
+            height: 80%;
+        }
+    }
+    .thumbimage {
+        width: 50px;
+        height: 50px;
     }
 }
