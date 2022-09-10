@@ -10,20 +10,12 @@
     position: relative;
     overflow: hidden;
     height: 265px;
-    width: 100%;
     border-radius: 8px;
-}
-
-#img-1 img {
-    height: 100%;
-    border-radius: 8px;
+    margin: 10px;
 }
 
 .img-block {
     position: absolute;
-    width: 100%;
-    bottom: -100px;
-    z-index: 2;
 }
 
 @keyframes slide-up {
@@ -34,7 +26,9 @@
         bottom: -20px;
     }
 }
-
+#image {
+    width: 100%;
+}
 #img-1:hover > .img-block {
     animation: slide-up 0.5s forwards;
 }
@@ -65,5 +59,8 @@
     img .art-img {
         height: 150px;
         width: 200px !important;
+    }
+    #image {
+        height: 100%;
     }
 }
