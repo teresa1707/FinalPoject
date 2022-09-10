@@ -11,7 +11,7 @@ import { Title } from 'components/Titles/Title'
 import React from 'react'
 import './ContactPage.scss'
 
-export const ContactPage = ({ handleOpen, handleClose }) => {
+export const ContactPage = ({}) => {
     let text = 'cancel'
     let text1 = 'send'
     let text2 = 'Contact'
@@ -30,9 +30,14 @@ export const ContactPage = ({ handleOpen, handleClose }) => {
                                 minWidth: 120,
                                 width: '90%',
                                 borderRadius: 8,
+                                label: { paddingLeft: 4, color: '#806d3c' },
+                                '.input-style,.MuiInput-root': {
+                                    color: '#806d3c',
+                                },
                             }}
                         >
                             <TextField
+                                style={{ padding: '0 30px 0 30px' }}
                                 className="input-style"
                                 label="Title"
                                 type="text"
@@ -44,6 +49,7 @@ export const ContactPage = ({ handleOpen, handleClose }) => {
                                 margin="dense"
                             />
                             <TextField
+                                style={{ padding: '0 30px 0 30px' }}
                                 className="input-style"
                                 label="Name"
                                 type="text"
@@ -55,6 +61,7 @@ export const ContactPage = ({ handleOpen, handleClose }) => {
                                 margin="dense"
                             />{' '}
                             <TextField
+                                style={{ padding: '0 30px 0 30px' }}
                                 className="input-style"
                                 label="First Name"
                                 type="text"
@@ -66,6 +73,7 @@ export const ContactPage = ({ handleOpen, handleClose }) => {
                                 margin="dense"
                             />
                             <TextField
+                                style={{ padding: '0 30px 0 30px' }}
                                 className="input-style"
                                 color="warning"
                                 label="E-mail"
@@ -77,19 +85,14 @@ export const ContactPage = ({ handleOpen, handleClose }) => {
                                 margin="dense"
                             />
                             <TextareaAutosize
+                                style={{ padding: '0 30px 0 30px' }}
                                 className="input-style"
                                 minRows={3}
                                 placeholder="Write here"
                             />
                             <div className="buttons">
-                                <MyButton
-                                    text={text}
-                                    handleClose={handleClose}
-                                />
-                                <MyButton
-                                    text={text1}
-                                    handleClose={handleClose}
-                                />
+                                <MyButton text={text} />
+                                <MyButton text={text1} />
                             </div>
                         </FormControl>
                     </Card>

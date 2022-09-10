@@ -3,7 +3,7 @@
     font-weight: bold;
     font-size: 13px;
     // color: #dfd7c6;
-
+    font-family: sans-serif;
     margin: 40px 0 0 20px;
 }
 #img-1 {
@@ -17,14 +17,11 @@
 #img-1 img {
     height: 100%;
     border-radius: 8px;
-    object-fit: cover;
 }
 
 .img-block {
     position: absolute;
-
     width: 100%;
-
     bottom: -100px;
     z-index: 2;
 }
@@ -60,7 +57,7 @@
         // filter: blur(0px);
     }
     to {
-        transform: scale(1.2);
+        transform: scale(1.1);
         // filter: blur(5px);
     }
 }

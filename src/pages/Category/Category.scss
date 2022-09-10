@@ -132,7 +132,7 @@
 
 .list1-item-cat .name-cat {
     position: relative;
-    top: -45px;
+    top: -35px;
     left: 10px;
 }
 
@@ -239,6 +239,11 @@
         p {
             font-size: 10px;
         }
+    }
+    .list1-item-cat .name-cat {
+        position: relative;
+        top: -50px;
+        left: 10px;
     }
 }
 

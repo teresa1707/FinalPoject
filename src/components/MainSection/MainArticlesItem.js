@@ -28,7 +28,7 @@ export const MainArticlesItem = ({
                 <Grid
                     item
                     xs={12}
-                    md={6}
+                    md={7}
                     className="title3-photo title3-container"
                 >
                     <div id="img-1">
@@ -37,12 +37,10 @@ export const MainArticlesItem = ({
                                 className="plus"
                                 to={`/${category}/${id}`}
                                 style={{
-                                    fontSize: 20,
                                     textDecoration: 'none',
-                                    color: 'orangered',
                                 }}
                             >
-                                find out more...
+                                Find out more...
                             </Link>
                         </div>
                         <img id="image" src={image} alt="sample41" />
@@ -54,7 +52,7 @@ export const MainArticlesItem = ({
                     </div>
                 </Grid>
 
-                <Grid item xs={12} md={6} className="title3-container ">
+                <Grid item xs={12} md={5} className="title3-container ">
                     <div className="inline">
                         <div className="list1-item">
                             <Link
