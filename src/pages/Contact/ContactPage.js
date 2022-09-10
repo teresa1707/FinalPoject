@@ -11,7 +11,7 @@ import { Title } from 'components/Titles/Title'
 import React from 'react'
 import './ContactPage.scss'
 
-export const ContactPage = ({}) => {
+export const ContactPage = () => {
     let text = 'cancel'
     let text1 = 'send'
     let text2 = 'Contact'

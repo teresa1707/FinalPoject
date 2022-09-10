@@ -6,7 +6,6 @@ import 'components/Article/ArticleItem.scss'
 import { FaHeart } from 'react-icons/fa'
 import { Link, useParams } from 'react-router-dom'
 import articles, { getArticlesObject } from 'utils/ArticlesArray'
-import { Reviews } from 'components/Reviews.js/Reviews'
 
 export const ArticleItem = ({
     articlesObject = getArticlesObject(articles),

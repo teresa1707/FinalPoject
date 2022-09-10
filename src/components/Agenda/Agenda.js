@@ -15,7 +15,7 @@ export function Agenda() {
         <div className="app">
             <h1 className="text-center">React Calendar</h1>
             <div className="calendar-container">
-                // as example
+                - as example
                 <Calendar
                     onChange={setDate}
                     value={date}

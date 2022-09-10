@@ -30,7 +30,7 @@ export const FavoritePageItem = ({
                                     <div className="rank-cat">
                                         <span
                                             className="catIcon"
-                                            style={{ marginRight: 16 }}
+                                            style={{ marginRight: 9 }}
                                         >
                                             <img
                                                 src={article.categoryIcon}
@@ -38,10 +38,11 @@ export const FavoritePageItem = ({
                                             />
                                         </span>
                                     </div>
+
                                     <div className="name-cat">
                                         <h2 className="title3-card gridItem">
                                             <Link
-                                                to={`/${category}/${id}`}
+                                                to={`${id}`}
                                                 style={{
                                                     textDecoration: 'none',
                                                     color: '#a35410',
@@ -57,7 +58,7 @@ export const FavoritePageItem = ({
                                 </div>{' '}
                                 <div style={{ fontSize: 10, color: 'brown' }}>
                                     {article.author}
-                                    <span className="art-separator">//</span>
+                                    <span className="art-separator">-</span>
                                     {article.date}
                                 </div>
                                 <div

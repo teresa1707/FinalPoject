@@ -46,7 +46,7 @@ export const CategoryItem = ({
 
                                 <div className="name-cat">
                                     <Link
-                                        to={`/${category}/${id}`}
+                                        to={`${id}`}
                                         style={{ textDecoration: 'none' }}
                                     >
                                         <h2 className="title3-card gridItem">
