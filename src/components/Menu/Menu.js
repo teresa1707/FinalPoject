@@ -1,4 +1,3 @@
-import { Favorite } from 'components/Favorite/Favorite'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MdClose } from 'react-icons/md'

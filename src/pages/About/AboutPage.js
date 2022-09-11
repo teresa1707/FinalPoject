@@ -1,13 +1,11 @@
 import { Card, Container, Grid } from '@mui/material'
-import { FollowUs } from 'components/FollowUs/FollowUs'
+
 import React from 'react'
 import './AboutPage.scss'
 import '../Category/Category.scss'
 import 'components/MainSection/Main.scss'
 import { SlidingButton } from 'components/MyButton/SlidingButton'
 import { Title } from 'components/Titles/Title'
-
-import { Agenda } from 'components/Agenda/Agenda'
 
 const PostsData = [
     {

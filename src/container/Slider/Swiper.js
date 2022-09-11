@@ -11,9 +11,10 @@ import 'swiper/css/navigation'
 // import required modules
 import { Parallax, Pagination, Navigation, Autoplay } from 'swiper'
 import { Container, Grid } from '@mui/material'
-import { Button } from 'rsuite'
+import { SlidingButton } from 'components/MyButton/SlidingButton'
 
 export default function Slider() {
+    let text = 'Read more...'
     return (
         <>
             <Swiper
@@ -65,12 +66,7 @@ export default function Slider() {
                                         tincidunt ut libero. Aenean feugiat non
                                         eros quis feugiat.
                                     </p>
-                                    <Button
-                                        appearance="subtle"
-                                        className="swiper-button"
-                                    >
-                                        read more...
-                                    </Button>
+                                    <SlidingButton text={text} />
                                 </Grid>
                                 <Grid
                                     item
@@ -112,12 +108,7 @@ export default function Slider() {
                                         tincidunt ut libero. Aenean feugiat non
                                         eros quis feugiat.
                                     </p>
-                                    <Button
-                                        appearance="subtle"
-                                        className="swiper-button"
-                                    >
-                                        read more...
-                                    </Button>
+                                    <SlidingButton text={text} />
                                 </Grid>
                                 <Grid item xs={12} md={6} className="grid-item">
                                     <img
@@ -156,12 +147,7 @@ export default function Slider() {
                                         tincidunt ut libero. Aenean feugiat non
                                         eros quis feugiat.
                                     </p>
-                                    <Button
-                                        appearance="subtle"
-                                        className="swiper-button"
-                                    >
-                                        read more...
-                                    </Button>
+                                    <SlidingButton text={text} />
                                 </Grid>
                                 <Grid item xs={12} md={6} className="grid-item">
                                     <img src="images/art11.jpg" alt="text" />

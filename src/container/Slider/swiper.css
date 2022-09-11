@@ -25,7 +25,7 @@ body {
 
 .swiper-slide {
     font-size: 18px;
-    color: #fff;
+    color: #b0a791;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 40px 60px;
@@ -50,14 +50,16 @@ body {
 }
 
 .swiper-slide .text {
-    font-size: 14px;
+    font-size: 12px;
     /* max-width: 400px; */
     max-width: 80%;
-    line-height: 1.3;
+    line-height: 3em;
     margin-left: 40px;
 }
 .swiper-slide .text p {
-    color: #dfd7c6;
+    color: #b0a791;
+    line-height: 2em;
+    font-weight: lighter;
 }
 .swiper-slide .text img {
     max-width: 100%;

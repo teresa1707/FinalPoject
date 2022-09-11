@@ -9,7 +9,7 @@ export const Favorite = ({ likedArticles }) => {
                 <div className="rank-cat">
                     <FaHeart
                         className="heart"
-                        style={{ color: 'red', fontSize: '16px' }}
+                        style={{ color: 'orangered', fontSize: '16px' }}
                     />
                     <span>
                         {Object.keys(likedArticles).reduce(
