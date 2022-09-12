@@ -17,6 +17,7 @@ export const ArticleItem = ({
     let category = articlesObject[id].category
     let fullText = articlesObject[id].fullText
     let isLiked = articleLikeState[id]
+
     return (
         <>
             <Grid container className="artGrid ">

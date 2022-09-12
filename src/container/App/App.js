@@ -9,7 +9,6 @@ export const App = () => {
     const [articleLikeState, setArticleLikeState] = useState({})
     const [likedArticles, setLikedArticles] = useState({})
     const [open, setOpen] = useState(false)
-
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
 
