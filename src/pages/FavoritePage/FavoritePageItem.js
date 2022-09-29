@@ -3,12 +3,7 @@ import React from 'react'
 import { FaHeart } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-export const FavoritePageItem = ({
-    article,
-    removeUnlikedArticle,
-    id,
-    category,
-}) => {
+export const FavoritePageItem = ({ article, removeUnlikedArticle, id }) => {
     return (
         <>
             <Grid item xs={12} md={6} key={id}>

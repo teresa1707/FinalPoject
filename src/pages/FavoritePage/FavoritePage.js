@@ -17,7 +17,6 @@ export const FavoritePage = ({
     removeUnlikedArticle,
 }) => {
     const [page, setPage] = useState(0)
-
     const articlesPerPage = 4
     const numberOfArticlesVisited = page * articlesPerPage
     const totalPages = Math.ceil(
