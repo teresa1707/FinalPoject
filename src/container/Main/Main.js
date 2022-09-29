@@ -12,7 +12,6 @@ import { ArticleItem } from 'components/Article/ArticleItem'
 import { ArtCategoryPage } from 'pages/Category/Art/ArtCategoryPage'
 import { NoMatch } from 'pages/NoMatch/NoMatch'
 import { FavoritePage } from 'pages/FavoritePage/FavoritePage'
-import articles from 'utils/ArticlesArray'
 import { ScrollUp } from 'components/ScrollUp/ScrollUp'
 
 export const Main = ({
