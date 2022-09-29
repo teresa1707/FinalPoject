@@ -25,7 +25,6 @@ export const Main = ({
     handleClose,
     open,
 }) => {
-    let id = articles.map((article) => article.id)
     return (
         <>
             <div className="wrapper">

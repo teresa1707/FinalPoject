@@ -9,7 +9,7 @@ import { FiFacebook } from 'react-icons/fi'
 export const SocialMedia = () => {
     return (
         <>
-            <a className="social" href="#">
+            <a className="social" href="#menu">
                 <FiFacebook
                     className="img"
                     style={{ color: 'brown', fontSize: 25 }}
@@ -20,7 +20,7 @@ export const SocialMedia = () => {
                 />
             </a>
 
-            <a className="social" href="#" target="_blank">
+            <a className="social" href="#menu" target="_blank">
                 <FiTwitter
                     className="img"
                     style={{ color: 'brown', fontSize: 20 }}
@@ -30,7 +30,7 @@ export const SocialMedia = () => {
                     style={{ color: 'brown', fontSize: 20 }}
                 />
             </a>
-            <a className="social" href="#" target="_blank">
+            <a className="social" href="#menu" target="_blank">
                 <FaYoutube
                     className="img"
                     style={{ color: 'brown', fontSize: 25 }}
@@ -43,7 +43,7 @@ export const SocialMedia = () => {
                     }}
                 />
             </a>
-            <a className="social" href="#" target="_blank">
+            <a className="social" href="#menu" target="_blank">
                 <FaLinkedin
                     className="img"
                     style={{
@@ -65,6 +65,7 @@ export const SocialMedia = () => {
                 className="social"
                 href="https://www.pinterest.com"
                 target="_blank"
+                rel="noreferrer"
             >
                 <FaPinterest
                     className="img"

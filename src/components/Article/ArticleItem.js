@@ -30,7 +30,7 @@ export const ArticleItem = ({
                                 rel="noreferrer"
                             >
                                 <img
-                                    alt="photo"
+                                    alt="img description"
                                     className="artImg frame"
                                     src={articlesObject[id].image}
                                 />
@@ -38,7 +38,7 @@ export const ArticleItem = ({
                         </div>
                         <div className="art-meta">
                             {articlesObject[id].author}
-                            <span className="art-separator">//</span>
+                            <span className="art-separator"> - </span>
                             {articlesObject[id].date}
                             {articlesObject[id].category}
                         </div>

@@ -8,7 +8,6 @@ import React from 'react'
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
-    borderRadius: theme.shape.borderRadius,
 
     backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {

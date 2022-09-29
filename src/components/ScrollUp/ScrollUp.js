@@ -11,14 +11,15 @@ export function ScrollUp({ height }) {
             behavior: 'smooth',
         })
     }
-    const handleScroll = (event) => {
-        if (document.documentElement.scrollTop > height) {
-            setShowButton(true)
-        } else if (!showButton) {
-            setShowButton(false)
-        }
-    }
+
     React.useEffect(() => {
+        const handleScroll = (event) => {
+            if (document.documentElement.scrollTop > height) {
+                setShowButton(true)
+            } else if (!showButton) {
+                setShowButton(false)
+            }
+        }
         window.addEventListener('scroll', handleScroll)
         return () => {
             window.removeEventListener('scroll', handleScroll)

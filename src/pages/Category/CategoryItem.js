@@ -33,7 +33,7 @@ export const CategoryItem = ({
                         </div>
                         <div className="art-meta">
                             {author}
-                            <span className="art-separator">//</span>
+                            <span className="art-separator"> - </span>
                             {date}
                         </div>
                         <Card className="art-category">
