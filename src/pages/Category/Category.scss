@@ -149,14 +149,27 @@
         overflow: hidden;
 
         &:hover {
-            .art-img-wrap {
+            .art-img-wrap,
+            .art-img-wrapFav {
                 .art-img {
                     transform: scale(1.1);
                 }
             }
         }
     }
+    .art-img-wrapFav {
+        border-radius: 10px;
+        position: relative;
+        top: 70px;
+        left: 5%;
 
+        .art-img {
+            border-radius: 6px;
+
+            transition: all 2s ease;
+            max-width: 550px;
+        }
+    }
     .art-img-wrap {
         border-radius: 10px;
         position: relative;

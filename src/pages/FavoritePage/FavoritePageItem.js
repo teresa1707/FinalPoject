@@ -10,7 +10,7 @@ export const FavoritePageItem = ({ article, removeUnlikedArticle, id }) => {
                 <Grid className="art-grid ">
                     <div className="art-item">
                         <div className="art-item-box">
-                            <div className="art-img-wrap">
+                            <div className="art-img-wrapFav">
                                 <img
                                     alt={article.title}
                                     className="art-img"
