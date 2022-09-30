@@ -28,11 +28,7 @@ export const ScienceCategoryPage = ({
     }
     return (
         <>
-            <Grid
-                container
-                spacing={{ xs: 2, md: 3 }}
-                columns={{ xs: 4, sm: 8, md: 12 }}
-            >
+            <Grid container columns={{ xs: 4, sm: 8, md: 12 }}>
                 {ArticlesArray.filter(
                     (article) => article.categoryIcon === '/images/lamp35.png'
                 )
@@ -51,7 +47,7 @@ export const ScienceCategoryPage = ({
                             date,
                             author,
                         }) => (
-                            <Grid item xs={12} sm={6} key={id}>
+                            <Grid item xs={12} sm={4} key={id}>
                                 <CategoryItem
                                     id={id}
                                     link={link}

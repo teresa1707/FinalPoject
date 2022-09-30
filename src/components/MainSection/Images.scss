@@ -1,8 +1,7 @@
 // main section item image
 .plus {
     font-weight: bold;
-    font-size: 13px;
-    // color: #dfd7c6;
+    font-size: 12px;
     font-family: sans-serif;
     margin: 40px 0 0 20px;
 }
@@ -10,12 +9,15 @@
     position: relative;
     overflow: hidden;
     height: 265px;
+    width: 430px;
+    border: 1px solid grey;
     border-radius: 8px;
     margin: 10px;
 }
 
 .img-block {
     position: absolute;
+    bottom: -50px;
 }
 
 @keyframes slide-up {
@@ -48,17 +50,17 @@
 @keyframes zoom-blur {
     from {
         transform: scale(1);
-        // filter: blur(0px);
+        filter: blur(0px);
     }
     to {
         transform: scale(1.1);
-        // filter: blur(5px);
+        filter: blur(2px);
     }
 }
 @media (max-width: 410px) {
     img .art-img {
         height: 150px;
-        width: 200px !important;
+        max-width: 200px !important;
     }
     #image {
         height: 100%;
